@@ -878,30 +878,3 @@ main {
 .boton-blanco img {
   height: 18px;
 }
-
-/* ============================================= */
-/*  BLOQUE 9: PIE DE PÁGINA                       */
-/* ============================================= */
-.pie-de-pagina {
-  background-color: #1e1e1e;
-  color: white;
-  padding: 25px 0;
-}
-.pie-de-pagina .contenedor {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.pie-de-pagina p {
-  font-family: "Ruluko", sans-serif;
-}
-.pie-de-pagina ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-.pie-de-pagina ul a {
-  color: white;
-  text-decoration: none;
-  font-family: "Ysabeau Office", serif;
-}

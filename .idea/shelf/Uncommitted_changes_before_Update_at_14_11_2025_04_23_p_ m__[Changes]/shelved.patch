@@ -1,0 +1,51 @@
+Index: public/assets/styles/Pie.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/public/assets/styles/Pie.css b/public/assets/styles/Pie.css
+new file mode 100644
+--- /dev/null	(date 1763155378144)
++++ b/public/assets/styles/Pie.css	(date 1763155378144)
+@@ -0,0 +1,41 @@
++.pie-de-pagina {
++  background-color: #212121;
++  color: #a0a0a0;
++  padding: 30px 0;
++  font-family: "Ruluko", sans-serif;
++}
++
++.contenedor-pie {
++  display: flex;
++  justify-content: space-between;
++  align-items: center;
++  max-width: 1100px;
++  margin: 0 auto;
++  padding: 0 20px;
++}
++
++.pie-izquierda {
++  display: flex;
++  align-items: center;
++  gap: 15px;
++}
++
++.logo-pie {
++  height: 30px;
++}
++
++.pie-derecha {
++  display: flex;
++  gap: 25px;
++}
++
++.pie-de-pagina a {
++  color: #e0e0e0;
++  text-decoration: none;
++  font-family: "Ysabeau Office", serif;
++}
++
++.pie-de-pagina a:hover {
++  text-decoration: underline;
++  color: white;
++}
