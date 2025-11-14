@@ -563,13 +563,13 @@ main {
   background-position: center;
 }
 .caracteristicas-individual li::before {
-  background-image: url("images/check blue.png");
+  background-image: url("../images/check blue.png");
 }
 .caracteristicas-empresarial li::before {
-  background-image: url("images/check purple.png");
+  background-image: url("../images/check purple.png");
 }
 .caracteristicas-corporativo li::before {
-  background-image: url("images/check orange.png");
+  background-image: url("../images/check orange.png");
 }
 .plan-individual {
   border-color: #4285f4;

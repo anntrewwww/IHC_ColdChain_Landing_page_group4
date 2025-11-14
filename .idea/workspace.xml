@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="32c87110-e599-4337-9375-89bce9a66556" name="Changes" comment="">
+      <changelist_data name="Cesar" email="" automatic="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/scripts/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/TF_ColdChain.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Coldchain.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/Coldchain.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/ICON 2.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/ICON 2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/LAB.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/LAB.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/VACUNA.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/VACUNA.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/adriel.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/adriel.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/app store.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/app store.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/arrow up.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/arrow up.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/bata.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/bata.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/build.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/build.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/calendario morado.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/calendario morado.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/calendario verde.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/calendario verde.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/cesar.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/cesar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/check blue.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/check blue.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/check orange.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/check orange.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/check purple.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/check purple.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/check.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/check.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/company.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/company.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/diego.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/diego.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/geo.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/geo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/gmail.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/gmail.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/graficos.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/graficos.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/hospital.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/hospital.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/interfaz.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/interfaz.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/maps.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/maps.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/money.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/money.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/movil.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/movil.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/notificacion.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/notificacion.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/odar.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/odar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/phone black.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/phone black.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/phone blue.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/phone blue.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/pills.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/pills.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/play store.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/play store.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/rolando.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/rolando.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/send.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/send.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/sergio.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/sergio.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/shield.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/shield.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/time.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/time.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/user.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/user.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/styles/styles.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Cesar" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SIGN_OFF_COMMIT" value="true" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;anntrewwww&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/anntrewwww/IHC_ColdChain_Landing_page_group4.git&quot;,
+    &quot;accountId&quot;: &quot;9075110e-7dcf-40c6-a0e1-51683405a3c9&quot;
+  }
+}</component>
+  <component name="MaliciousPackageCheckinHandlerState">
+    <option name="packageCheck" value="true" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="35RyTe4BCa9JnNZ9bbBxAYMhVch" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JavaScript Debug.index.html.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "feature/mejorar-seccion-beneficios",
+    "last_opened_file_path": "D:/TF_ColdChain",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\TF_ColdChain\public" />
+      <recent name="D:\TF_ColdChain\public\assets\styles" />
+      <recent name="D:\TF_ColdChain\public\assets" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-WS-252.27397.92" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="32c87110-e599-4337-9375-89bce9a66556" name="Changes" comment="" />
+      <created>1763087187963</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1763087187963</updated>
+      <workItem from="1763087189072" duration="417000" />
+      <workItem from="1763087633393" duration="79000" />
+      <workItem from="1763088371801" duration="494000" />
+      <workItem from="1763088898461" duration="59000" />
+      <workItem from="1763088958784" duration="532000" />
+      <workItem from="1763089554645" duration="638000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UpdateCopyrightCheckinHandler">
+    <option name="UPDATE_COPYRIGHT" value="true" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+</project>
