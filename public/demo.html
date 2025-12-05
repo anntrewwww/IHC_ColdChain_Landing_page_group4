@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Demo - ColdChain</title>
+  <link href="favicon.ico" rel="icon" type="image/x-icon">
+  <link href="assets/images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+  <link href="assets/images/android-chrome-192x192.png" rel="icon" sizes="192x192" type="image/png">
+  <link href="assets/images/android-chrome-512x512.png" rel="icon" sizes="512x512" type="image/png">
+  <link href="assets/styles/styles.css" rel="stylesheet"/>
+  <link href="assets/styles/Pie.css" rel="stylesheet"/>
+  <link href="assets/styles/pages.css" rel="stylesheet"/>
+  <link href="assets/styles/dashboard.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Ruluko&family=Ysabeau+Office:ital,wght@0,1..1000;1,1..1000&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+<header class="encabezado-principal">
+  <nav class="barra-navegacion">
+    <a class="logo" href="ColdChain.html">
+      <img alt="Logo ColdChain" src="assets/images/Coldchain.png"/>
+      <span>ColdChain</span>
+    </a>
+    <ul class="menu-navegacion">
+      <li><a href="ColdChain.html">Inicio</a></li>
+      <li><a href="login.html">Iniciar Sesión</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <!-- Sección Hero -->
+  <section class="hero-demo">
+    <div class="contenedor grid-demo-hero">
+      <div class="texto-demo">
+        <h1>Monitoreo de Cadena de Frío en Tiempo Real</h1>
+        <p
+          style="
+                font-family: 'Ruluko', sans-serif;
+                font-size: 1.1rem;
+                color: #555;
+              "
+        >
+          Protege la integridad de tus productos con supervisión continua,
+          alertas automáticas y reportes detallados para auditorías.
+        </p>
+        <div class="botones-demo">
+          <!-- Botón Correcto -->
+          <button
+            class="boton"
+            onclick="abrirFuncionalidades()"
+            style="background: white; border-color: black"
+          >
+            Funcionalidades
+          </button>
+          <a href="registro.html" style="text-decoration: none">
+            <button
+              class="boton"
+              style="
+                    background: black;
+                    color: white;
+                    border-color: black;
+                    width: 100%;
+                  "
+            >
+              Comenzar Monitoreo
+            </button>
+          </a>
+        </div>
+      </div>
+      <div class="imagen-demo">
+        <img
+          alt="Ilustración Dashboard"
+          src="assets/images/dashboard.png"
+          style="
+                width: 100%;
+                max-width: 500px;
+                display: block;
+                margin: 0 auto;
+              "
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Por qué ColdChain -->
+  <section class="contenedor seccion-comun">
+    <h2 class="titulo-seccion">¿Por qué ColdChain?</h2>
+    <p class="subtitulo-seccion">
+      La cadena de frío es crítica. Sus fallas son costosas.
+    </p>
+
+    <div class="grid-tarjetas-demo">
+      <!-- Tarjeta 1 -->
+      <div class="tarjeta-horizontal">
+        <img
+          alt="Gráfico Pérdidas"
+          class="img-tarjeta-demo"
+          src="assets/images/perdidas.png"
+          style="background: #222"
+        />
+        <div class="contenido-tarjeta-demo">
+          <h4>Pérdidas Económicas</h4>
+          <p>
+            Hasta el 50% de las vacunas se pierden anualmente, costando
+            miles de millones.
+          </p>
+        </div>
+      </div>
+
+      <!-- Tarjeta 2 -->
+      <div class="tarjeta-horizontal">
+        <img
+          alt="Trazabilidad"
+          class="img-tarjeta-demo"
+          src="assets/images/Trazabilidad.png"
+          style="background: #222"
+        />
+        <div class="contenido-tarjeta-demo">
+          <h4>Falta de Trazabilidad</h4>
+          <p>
+            Registros manuales propensos a errores que complican las
+            auditorías y la toma de decisiones.
+          </p>
+        </div>
+      </div>
+
+      <!-- Tarjeta 3 -->
+      <div class="tarjeta-horizontal">
+        <img
+          alt="Riesgo Salud"
+          class="img-tarjeta-demo"
+          src="assets/images/Riesgo salud.png"
+          style="background: #ddd"
+        />
+        <div class="contenido-tarjeta-demo">
+          <h4>Riesgo para la Salud Pública</h4>
+          <p>
+            Insumos ineficaces ponen en riesgo la seguridad de los pacientes
+            y la confianza.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- MODAL FUNCIONALIDADES (OCULTO POR DEFECTO POR CSS) -->
+<div class="modal-overlay-center" id="modal-funcionalidades">
+  <div class="modal-content-center large">
+    <h3>Lo que ofrece ColdChain</h3>
+
+    <div class="feature-list">
+      <div class="feature-item">
+        <div class="feature-icon">📡</div>
+        <div class="feature-text">
+          <h4>Monitoreo IoT en Tiempo Real</h4>
+          <p>
+            Sensores conectados 24/7 que transmiten temperatura, humedad y
+            ubicación GPS cada 5 minutos.
+          </p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon">🔔</div>
+        <div class="feature-text">
+          <h4>Sistema de Alertas Inteligente</h4>
+          <p>
+            Recibe notificaciones inmediatas por WhatsApp o Email cuando un
+            equipo sale del rango seguro.
+          </p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon">📊</div>
+        <div class="feature-text">
+          <h4>Reportes Automatizados</h4>
+          <p>
+            Genera reportes PDF para auditorías (DIGEMID/FDA) con un solo
+            clic, incluyendo gráficos de tendencia.
+          </p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon">🤖</div>
+        <div class="feature-text">
+          <h4>Asistente Virtual IA</h4>
+          <p>
+            Nuestro Chatbot te ayuda a gestionar tus equipos, resolver dudas
+            técnicas y navegar la plataforma.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn-salir-modal" onclick="cerrarFuncionalidades()">
+      Salir
+    </button>
+  </div>
+</div>
+
+<footer class="pie-de-pagina">
+  <div class="contenedor-pie">
+    <div class="pie-izquierda">
+      <img
+        alt="Logo ColdChain"
+        class="logo-pie"
+        src="assets/images/Coldchain.png"
+      />
+      <p>© 2025 ColdChain. Todos los derechos reservados.</p>
+    </div>
+    <div class="pie-derecha">
+      <a href="#">Términos de Servicio</a>
+      <a href="#">Política de Privacidad</a>
+      <a href="assets/Documentos/Proteccion%20de%20Datos.pdf">Protección de Datos</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Script JS -->
+<script src="assets/scripts/script.js"></script>
+</body>
+</html>

@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ColdChain</title>
+    <link href="favicon.ico" rel="icon" type="image/x-icon">
+    <link href="assets/images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="assets/images/android-chrome-192x192.png" rel="icon" sizes="192x192" type="image/png">
+    <link href="assets/images/android-chrome-512x512.png" rel="icon" sizes="512x512" type="image/png">
     <link href="assets/styles/styles.css" rel="stylesheet"/>
     <link href="assets/styles/Pie.css" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,23 +18,64 @@
     />
   </head>
   <body>
-    <header class="encabezado-principal">
-      <nav class="barra-navegacion">
-        <a href="#inicio" class="logo">
-          <img alt="Logo ColdChain" src="assets/images/Coldchain.png"/>
-          <span>ColdChain</span>
-        </a>
-        <ul class="menu-navegacion">
-          <li><a href="#inicio" class="activo">Inicio</a></li>
-          <li><a href="#solucion">Solución</a></li>
-          <li><a href="#beneficios">Beneficios</a></li>
-          <li><a href="#equipo">Equipo</a></li>
-          <li><a href="#precios">Precios</a></li>
-          <li><a href="#app-movil">App Móvil</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-        </ul>
-      </nav>
-    </header>
+  <header class="encabezado-principal">
+    <nav class="barra-navegacion">
+      <a class="logo" href="#inicio">
+        <img alt="Logo ColdChain" src="assets/images/Coldchain.png"/>
+        <span>ColdChain</span>
+      </a>
+
+      <ul class="menu-navegacion">
+        <li><a class="activo" href="#inicio">Inicio</a></li>
+        <li><a href="#solucion">Solución</a></li>
+        <li><a href="#beneficios">Beneficios</a></li>
+        <li><a href="#equipo">Equipo</a></li>
+        <li><a href="#precios">Precios</a></li>
+        <li><a href="#app-movil">App Móvil</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+
+      <button class="menu-hamburguesa-landing" onclick="toggleMenuLanding()">
+        <img alt="Menú" src="assets/images/menublack.png">
+      </button>
+    </nav>
+  </header>
+
+  <!-- MENÚ LATERAL MÓVIL CON ICONOS -->
+  <div class="menu-lateral-landing" id="menuLateralLanding">
+    <div class="cabecera-menu-landing">
+      <h3>Menú</h3>
+      <button class="btn-cerrar-menu" onclick="toggleMenuLanding()">&times;</button>
+    </div>
+    <div class="lista-enlaces-landing">
+      <a href="#inicio">
+        <img alt="Icono" src="assets/images/inicio.png" width="20"> Inicio
+      </a>
+      <a href="#solucion">
+        <img alt="Icono" src="assets/images/solucion.png" width="20"> Solución
+      </a>
+      <a href="#beneficios">
+        <img alt="Icono" src="assets/images/beneficios.png" width="20"> Beneficios
+      </a>
+      <a href="#equipo">
+        <img alt="Icono" src="assets/images/equipo.png" width="20"> Equipo
+      </a>
+      <a href="#precios">
+        <img alt="Icono" src="assets/images/precio.png" width="20"> Precios
+      </a>
+      <a href="#app-movil">
+        <img alt="Icono" src="assets/images/appmovilblack.png" width="20"> App Móvil
+      </a>
+      <a href="#contacto">
+        <img alt="Icono" src="assets/images/phone black.png" width="20"> Contacto
+      </a>
+      <!-- Enlace extra de Iniciar Sesión -->
+      <a href="login.html" style="color: #2563eb; font-weight: bold; border-top: 1px solid #eee;">
+        <img alt="Icono" src="assets/images/userblack.png" width="20"> Iniciar Sesión
+      </a>
+    </div>
+  </div>
+  <div class="overlay-menu-landing" id="overlayMenuLanding" onclick="toggleMenuLanding()"></div>
 
     <main>
       <section id="inicio" class="seccion-inicio">
@@ -52,8 +97,10 @@
               <div><strong>100+</strong><span>Hospitales</span></div>
             </div>
             <div class="botones-inicio">
-              <a href="#" class="boton boton-secundario">Iniciar Sesión</a>
-              <a href="#" class="boton boton-primario">Ver Demo</a>
+              <a class="boton boton-secundario" href="login.html"
+              >Iniciar Sesión</a
+              >
+              <a class="boton boton-primario" href="demo.html">Ver Demo</a>
             </div>
           </div>
           <div class="imagen-inicio">
@@ -81,12 +128,31 @@
             software inteligente para ofrecer visibilidad completa y control
             automatizado de la cadena de frío.
           </p>
+
+          <!-- Botones de Pestañas -->
           <div class="pestanas-solucion">
-            <button class="boton-pestana activo">Visión General</button>
-            <button class="boton-pestana">Hardware</button>
-            <button class="boton-pestana">Software</button>
+            <button
+              class="boton-pestana activo"
+              onclick="abrirPestana(event, 'vision')"
+            >
+              Visión General
+            </button>
+            <button
+              class="boton-pestana"
+              onclick="abrirPestana(event, 'hardware')"
+            >
+              Hardware
+            </button>
+            <button
+              class="boton-pestana"
+              onclick="abrirPestana(event, 'software')"
+            >
+              Software
+            </button>
           </div>
-          <div class="contenido-solucion">
+
+          <!-- CONTENIDO 1: VISIÓN GENERAL -->
+          <div class="contenido-solucion tab-content activo" id="vision">
             <div class="texto-solucion">
               <h3>Una solución, múltiples beneficios</h3>
               <p>
@@ -112,6 +178,175 @@
             </div>
             <div class="imagen-solucion">
               <img alt="Equipamiento de laboratorio" src="assets/images/LAB.png"/>
+            </div>
+          </div>
+
+          <!-- CONTENIDO 2: HARDWARE -->
+          <div class="contenido-solucion tab-content" id="hardware">
+            <div class="bloque-completo">
+              <h3 class="titulo-centro">Hardware Especializado</h3>
+              <p class="subtitulo-centro">
+                Dispositivos IoT diseñados específicamente para entornos médicos
+                críticos.
+              </p>
+
+              <!-- Grid de 4 tarjetas azules -->
+              <div class="grid-cuatro">
+                <div class="tarjeta-feature">
+                  <div class="icono-feature azul">
+                    <img alt="Temp" src="assets/images/temppwhite.png"/>
+                  </div>
+                  <h4>Sensores de Precisión</h4>
+                  <p>
+                    Monitoreo continuo de temperatura y humedad con precisión de
+                    ±0.1°C.
+                  </p>
+                </div>
+                <div class="tarjeta-feature">
+                  <div class="icono-feature azul">
+                    <img alt="Wifi" src="assets/images/wifiwhite.png"/>
+                  </div>
+                  <h4>Conectividad IoT</h4>
+                  <p>
+                    Transmisión de datos en tiempo real mediante protocolos
+                    seguros.
+                  </p>
+                </div>
+                <div class="tarjeta-feature">
+                  <div class="icono-feature azul">
+                    <img alt="Pulse" src="assets/images/signalwhite.png"/>
+                  </div>
+                  <h4>Alertas Automáticas</h4>
+                  <p>
+                    Notificaciones instantáneas ante cualquier desviación
+                    crítica.
+                  </p>
+                </div>
+                <div class="tarjeta-feature">
+                  <div class="icono-feature azul">
+                    <img alt="Shield" src="assets/images/shieldwhite.png"/>
+                  </div>
+                  <h4>Diseño Robusto</h4>
+                  <p>
+                    Resistente a condiciones adversas y certificado para uso
+                    médico.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Sección Especificaciones Técnicas -->
+              <div class="specs-container">
+                <div class="specs-texto">
+                  <h3>Especificaciones Técnicas</h3>
+                  <ul class="lista-specs">
+                    <li>
+                      <span>Rango de temperatura:</span>
+                      <span>-40°C a +85°C</span>
+                    </li>
+                    <li><span>Precisión:</span> <span>±0.1°C</span></li>
+                    <li>
+                      <span>Conectividad:</span> <span>WiFi, 4G, LoRaWAN</span>
+                    </li>
+                    <li><span>Batería:</span> <span>Hasta 5 años</span></li>
+                    <li>
+                      <span>Certificaciones:</span> <span>CE, FCC, FDA</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="specs-imagen">
+                  <img
+                    alt="Dispositivo Hardware Closeup"
+                    src="assets/images/procesador.jpg"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CONTENIDO 3: SOFTWARE -->
+          <div class="contenido-solucion tab-content" id="software">
+            <div class="bloque-completo">
+              <h3 class="titulo-centro">Plataforma Inteligente</h3>
+              <p class="subtitulo-centro">
+                Software avanzado con inteligencia artificial que convierte
+                datos en insights.
+              </p>
+
+              <!-- Grid de 4 tarjetas verdes -->
+              <div class="grid-cuatro">
+                <div class="tarjeta-feature">
+                  <div class="icono-feature verde">
+                    <img alt="Dash" src="assets/images/graphicswhite.png"/>
+                  </div>
+                  <h4>Dashboard Intuitivo</h4>
+                  <p>
+                    Visualización clara y en tiempo real del estado de toda la
+                    cadena.
+                  </p>
+                </div>
+                <div class="tarjeta-feature">
+                  <div class="icono-feature verde">
+                    <img alt="Geo" src="assets/images/gpswhite.png"/>
+                  </div>
+                  <h4>Geolocalización</h4>
+                  <p>Seguimiento GPS de productos durante el transporte.</p>
+                </div>
+                <div class="tarjeta-feature">
+                  <div class="icono-feature verde">
+                    <img alt="Alert" src="assets/images/notification.png"/>
+                  </div>
+                  <h4>Sistema de Alertos</h4>
+                  <p>
+                    Notificaciones multicanal personalizables por criticidad.
+                  </p>
+                </div>
+                <div class="tarjeta-feature">
+                  <div class="icono-feature verde">
+                    <img alt="App" src="assets/images/movilwhite.png"/>
+                  </div>
+                  <h4>App Móvil</h4>
+                  <p>
+                    Acceso completo desde dispositivos móviles para supervisión
+                    remota.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Sección Funcionalidades Avanzadas (Fondo azul claro) -->
+              <div class="avanzadas-container">
+                <h3 class="titulo-centro">Funcionalidades Avanzadas</h3>
+                <div class="grid-tres-centro">
+                  <div class="item-avanzado">
+                    <div class="icono-circulo blanco">
+                      <img alt="AI" src="assets/images/chipblue.png"/>
+                    </div>
+                    <h4>IA Predictiva</h4>
+                    <p>
+                      Algoritmos que predicen posibles fallas antes de que
+                      ocurran.
+                    </p>
+                  </div>
+                  <div class="item-avanzado">
+                    <div class="icono-circulo blanco">
+                      <img alt="Chart" src="assets/images/graphicsgreen.png"/>
+                    </div>
+                    <h4>Analytics Avanzado</h4>
+                    <p>
+                      Reportes detallados y métricas de rendimiento en tiempo
+                      real.
+                    </p>
+                  </div>
+                  <div class="item-avanzado">
+                    <div class="icono-circulo blanco">
+                      <img alt="Sec" src="assets/images/shieldpurple.png"/>
+                    </div>
+                    <h4>Seguridad Total</h4>
+                    <p>
+                      Encriptación de extremo a extremo y cumplimiento HIPAA.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -226,53 +461,66 @@
       <section id="equipo" class="seccion-comun seccion-gris">
         <div class="contenedor">
           <h2 class="titulo-seccion">Nuestro Equipo</h2>
+
+          <!-- CONTENEDOR DE VIDEO -->
+          <div class="video-equipo-container">
+            <div class="video-responsive-wrapper">
+              <!-- Reemplaza el src con la URL de tu video -->
+              <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen frameborder="0"
+                      height="315" referrerpolicy="strict-origin-when-cross-origin"
+                      src="https://www.youtube.com/embed/LQqz-sqlIA0?si=kER8d2Tu3D1SciFP"
+                      title="YouTube video player" width="560"></iframe>
+            </div>
+            <p class="video-caption">Conoce a los expertos detrás de ColdChain</p>
+          </div>
+
           <div class="cuadricula-equipo">
             <div class="miembro-equipo">
               <img alt="Sergio Goycochea" src="assets/images/sergio.png"/>
               <p>
                 Goycochea Cruzado, Sergio Matias<span class="puesto"
-                  >Director Ejecutivo (CEO)</span
-                >
+              >Director Ejecutivo (CEO)</span
+              >
               </p>
             </div>
             <div class="miembro-equipo">
               <img alt="Cesar Huanca" src="assets/images/cesar.png"/>
               <p>
                 Huanca Maza, Cesar Andre<span class="puesto"
-                  >Director de Tecnología (CTO)</span
-                >
+              >Director de Tecnología (CTO)</span
+              >
               </p>
             </div>
             <div class="miembro-equipo">
               <img alt="Odar Alcocer" src="assets/images/odar.png"/>
               <p>
                 Alcocer Vásquez, Odar Javier<span class="puesto"
-                  >Director de Producto y UX (CPO)</span
-                >
+              >Director de Producto y UX (CPO)</span
+              >
               </p>
             </div>
             <div class="miembro-equipo">
               <img alt="Rolando Quevedo" src="assets/images/rolando.png"/>
               <p>
                 Quevedo Calizaya, Rolando Aarón<span class="puesto"
-                  >Director de Operaciones (COO)</span
-                >
+              >Director de Operaciones (COO)</span
+              >
               </p>
             </div>
             <div class="miembro-equipo">
               <img alt="Diego Rojas" src="assets/images/diego.png"/>
               <p>
                 Rojas Díaz, Diego Enrique<span class="puesto"
-                  >Ingeniero Principal de Datos (Lead Data Engineer)</span
-                >
+              >Ingeniero Principal de Datos (Lead Data Engineer)</span
+              >
               </p>
             </div>
             <div class="miembro-equipo">
               <img alt="Adriel Flores" src="assets/images/adriel.png"/>
               <p>
                 Flores Masias, Adriel Jose<span class="puesto"
-                  >Director de Marketing (CMO)</span
-                >
+              >Director de Marketing (CMO)</span
+              >
               </p>
             </div>
           </div>
@@ -315,7 +563,9 @@
               </div>
               <p>Perfecto para pequeñas clínicas y consultorios médicos</p>
               <div class="precio">GRATIS</div>
-              <a href="#" class="boton boton-azul">GRATIS</a>
+              <a class="boton boton-azul" href="registro.html"
+              >EMPEZAR GRATIS</a
+              >
               <div class="contenedor-caracteristicas">
                 <h4>Incluye:</h4>
                 <ul class="caracteristicas caracteristicas-individual">
@@ -337,7 +587,9 @@
               </div>
               <p>Ideal para hospitales, laboratorios y distribuidoras</p>
               <div class="precio">$300 / mes</div>
-              <a href="#" class="boton boton-morado">COMPRAR</a>
+              <button class="boton boton-morado" onclick="abrirModalPago()">
+                COMPRAR
+              </button>
               <div class="contenedor-caracteristicas">
                 <h4>Incluye:</h4>
                 <ul class="caracteristicas caracteristicas-empresarial">
@@ -363,7 +615,9 @@
               </div>
               <p>Solución a medida para grandes organizaciones de salud</p>
               <div class="precio">Personalizado</div>
-              <a href="#" class="boton boton-naranja">CONTACTAR VENTAS</a>
+              <button class="boton boton-naranja" onclick="abrirModalVentas()">
+                CONTACTAR VENTAS
+              </button>
               <div class="contenedor-caracteristicas">
                 <h4>Incluye:</h4>
                 <ul class="caracteristicas caracteristicas-corporativo">
@@ -386,7 +640,7 @@
         </div>
       </section>
 
-      <section id="app-movil" class="seccion-comun seccion-app">
+      <section class="seccion-comun seccion-app" id="app-movil">
         <div class="contenedor contenido-app">
           <div class="texto-app">
             <h2 class="titulo-seccion-izquierda">Nuestra App Móvil</h2>
@@ -435,27 +689,79 @@
               </div>
             </div>
             <div class="tiendas-app">
-              <a href="#"
-                ><img
-                  width="240"
+              <a href="https://www.apple.com/la/app-store/" target="_blank">
+                <img
+                  alt="Descargar en App Store"
                   height="80"
                   src="assets/images/app%20store.png"
-                  alt="Descargar en App Store"
-              /></a>
-              <a href="#"
-                ><img
-                  width="238"
+                  width="240"
+                />
+              </a>
+              <a
+                href="https://play.google.com/store/games?hl=es_PE&pli=1"
+                target="_blank"
+              >
+                <img
+                  alt="Descargar en Google Play"
                   height="80"
                   src="assets/images/play%20store.png"
-                  alt="Descargar en Google Play"
-              /></a>
+                  width="238"
+                />
+              </a>
             </div>
           </div>
-          <div class="imagen-app">
-            <img
-              src="assets/images/MOVIL_CAMPAÑAS.png"
-              alt="Mockup de la aplicación móvil ColdChain"
-            />
+
+          <!-- CARRUSEL DE IMÁGENES Y VIDEO -->
+          <div class="imagen-app carousel-container">
+            <!-- Slide 1: Video YouTube -->
+            <div class="mySlides fade" style="display: block">
+              <div class="numbertext">1 / 3</div>
+
+              <div class="video-container-full">
+                <iframe
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                  frameborder="0"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  src="https://www.youtube.com/embed/IMOsKC_O8lM?si=Fe98buFNcSUfmJnK"
+                  title="YouTube video player"
+                >
+                </iframe>
+              </div>
+
+              <div class="text-caption">Sobre el producto:</div>
+            </div>
+            <!-- Slide 2: Imagen App (Ejemplo) -->
+            <div class="mySlides fade" style="display: none">
+              <div class="numbertext">2 / 3</div>
+              <img
+                src="assets/images/metricas.png"
+                style="width: 100%; border-radius: 20px"
+              />
+              <div class="text-caption">Campañas</div>
+            </div>
+
+            <!-- Slide 3: Otra Imagen (Puedes poner otra captura aquí) -->
+            <div class="mySlides fade" style="display: none">
+              <div class="numbertext">3 / 3</div>
+              <!-- He reutilizado una imagen, cambia el src por otra captura si tienes -->
+              <img
+                src="assets/images/raar.png"
+                style="width: 100%; border-radius: 20px"
+              />
+              <div class="text-caption">Vista de Métricas</div>
+            </div>
+
+            <!-- Botones de navegación -->
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+            <!-- Puntos indicadores -->
+            <div style="text-align: center; margin-top: 10px">
+              <span class="dot active" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
           </div>
         </div>
       </section>
@@ -473,7 +779,10 @@
             <div class="principal-contacto">
               <div class="tarjeta tarjeta-formulario">
                 <h3>Solicitar Información</h3>
-                <form>
+                <form
+                  id="form-contacto"
+                  onsubmit="enviarSolicitudContacto(event)"
+                >
                   <div class="fila-formulario">
                     <div class="grupo-formulario">
                       <label for="nombre">Nombre completo *</label
@@ -511,9 +820,14 @@
                       placeholder="Describe tu cadena de suministro actual..."
                     ></textarea>
                   </div>
-                  <button type="submit" class="boton boton-enviar">
+                  <!-- BOTON ACTUALIZADO: ENLACE A REGISTRO -->
+                  <a
+                    class="boton boton-enviar"
+                    href="registro2.html"
+                    style="text-decoration: none"
+                  >
                     <img alt="Enviar" src="assets/images/send.png"/> Enviar solicitud
-                  </button>
+                  </a>
                   <p class="nota-formulario">
                     * Campos obligatorios. Respetamos tu privacidad y no
                     compartimos tu información.
@@ -588,28 +902,158 @@
                   Nuestro equipo está disponible para consultas urgentes sobre
                   implementación de cadena de frío.
                 </p>
-                <a href="#" class="boton boton-blanco"
+                <!-- BOTON ACTUALIZADO: ENLACE A REGISTRO -->
+                <a class="boton boton-blanco" href="registro2.html"
                 ><img alt="Llamar" src="assets/images/phone%20blue.png"/> Llamar
-                  ahora</a
-                >
+                  ahora</a>
               </div>
             </div>
           </div>
         </div>
       </section>
     </main>
+  <div class="modal-overlay-landing" id="modal-solicitud-exito">
+    <div class="modal-box-landing">
+      <div class="icono-check">✔</div>
+      <h3>¡Solicitud Enviada!</h3>
+      <p>Nos pondremos en contacto contigo pronto.</p>
+    </div>
+  </div>
+
+  <!-- 2. MODAL PAGO (Empresarial) -->
+  <div class="modal-overlay-landing" id="modal-pago">
+    <div class="modal-box-landing pago">
+      <button class="btn-cerrar-modal" onclick="cerrarModal('modal-pago')">
+        &times;
+      </button>
+
+      <!-- TÍTULO CENTRADO CORREGIDO -->
+      <div style="text-align: center; margin-bottom: 1rem">
+        <h3 style="margin: 0; font-size: 1.8rem; line-height: 1.2">
+          Pagar Suscripción
+        </h3>
+        <h3 style="margin: 0; font-size: 1.4rem; color: #555">EMPRESARIAL</h3>
+      </div>
+
+      <p class="monto-total">Total a pagar: <strong>$300.00</strong></p>
+
+      <form onsubmit="procesarPago(event)">
+        <div class="campo-pago">
+          <label>Nombre en la tarjeta</label>
+          <input
+            class="input-pago"
+            placeholder="Como aparece en la tarjeta"
+            required
+            type="text"
+          />
+        </div>
+        <div class="campo-pago">
+          <label>Número de Tarjeta</label>
+          <input
+            class="input-pago"
+            maxlength="19"
+            placeholder="0000 0000 0000 0000"
+            required
+            type="text"
+          />
+        </div>
+
+        <!-- Fila de Expiración y CVC -->
+        <div class="fila-pago">
+          <div class="campo-pago">
+            <label>Expiración</label>
+            <input
+              class="input-pago"
+              maxlength="5"
+              placeholder="MM/AA"
+              required
+              style="text-align: center"
+              type="text"
+            />
+          </div>
+          <div class="campo-pago">
+            <label>CVC</label>
+            <input
+              class="input-pago"
+              maxlength="3"
+              placeholder="123"
+              required
+              style="text-align: center"
+              type="password"
+            />
+          </div>
+        </div>
+
+        <button class="boton boton-morado btn-pagar" type="submit">
+          PAGAR AHORA
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- 3. MODAL ÉXITO PAGO -->
+  <div class="modal-overlay-landing" id="modal-pago-exito">
+    <div class="modal-box-landing">
+      <div class="icono-check">✔</div>
+      <h3>¡Compra Exitosa!</h3>
+      <p>Redirigiendo a tu panel de control...</p>
+    </div>
+  </div>
+
+  <!-- 4. MODAL VENTAS (Corporativo) -->
+  <div class="modal-overlay-landing" id="modal-ventas">
+    <div class="modal-box-landing">
+      <button class="btn-cerrar-modal" onclick="cerrarModal('modal-ventas')">
+        &times;
+      </button>
+      <h3>Contactar a Ventas</h3>
+      <p>Déjanos tu correo y un asesor te escribirá.</p>
+      <form onsubmit="enviarCorreoVentas(event)">
+        <input
+          class="input-pago"
+          placeholder="tu@correo.com"
+          required
+          style="margin-bottom: 1rem"
+          type="email"
+        />
+        <button class="boton boton-naranja btn-pagar" type="submit">
+          ENVIAR
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- 5. MODAL ÉXITO VENTAS -->
+  <div class="modal-overlay-landing" id="modal-ventas-exito">
+    <div class="modal-box-landing">
+      <div class="icono-check naranja">✔</div>
+      <h3>Envío Exitoso</h3>
+      <p>Revisa tu bandeja de entrada pronto.</p>
+    </div>
+  </div>
     <footer class="pie-de-pagina">
       <div class="contenedor-pie">
         <div class="pie-izquierda">
-          <img alt="Logo ColdChain" class="logo-pie" src="assets/images/Coldchain.png"/>
+          <img
+            alt="Logo ColdChain"
+            class="logo-pie"
+            src="assets/images/Coldchain.png"
+          />
           <p>© 2025 ColdChain. Todos los derechos reservados.</p>
         </div>
         <div class="pie-derecha">
-          <a href="#">Términos de Servicio</a>
-          <a href="#">Política de Privacidad</a>
-          <a href="assets/Documentos/obtenerDocumento.pdf">Protección de Datos</a>
+          <a href="assets/Documentos/Terminos%20de%20Servicio.pdf">Términos de Servicio</a>
+          <a href="assets/Documentos/Politica%20de%20Privacidad.pdf"
+          >Política de Privacidad</a
+          >
+          <a href="assets/Documentos/Proteccion%20de%20Datos.pdf">Protección de Datos</a>
         </div>
       </div>
     </footer>
+  <!-- VINCULAR NUEVO SCRIPT -->
+  <script src="assets/scripts/landing.js"></script>
+  <script src="assets/scripts/script.js"></script>
+  <script src="assets/scripts/script2.js"></script>
+
   </body>
 </html>

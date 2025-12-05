@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Contacto Avanzado - ColdChain</title>
+  <link href="favicon.ico" rel="icon" type="image/x-icon">
+  <link href="assets/images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+  <link href="assets/images/android-chrome-192x192.png" rel="icon" sizes="192x192" type="image/png">
+  <link href="assets/images/android-chrome-512x512.png" rel="icon" sizes="512x512" type="image/png">
+  <link href="assets/styles/styles.css" rel="stylesheet"/>
+  <link href="assets/styles/styles2.css" rel="stylesheet"/>
+  <link href="assets/styles/Pie.css" rel="stylesheet"/>
+
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Ruluko&family=Ysabeau+Office:ital,wght@0,1..1000;1,1..1000&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+<!-- HEADER RESPONSIVO -->
+<header class="encabezado-principal">
+  <nav class="barra-navegacion">
+    <a class="logo" href="#inicio">
+      <img alt="Logo ColdChain" src="assets/images/Coldchain.png"/>
+      <span>ColdChain</span>
+    </a>
+
+    <!-- Menú Desktop (Se oculta en móvil por CSS) -->
+    <ul class="menu-navegacion">
+      <li><a class="activo" href="#inicio">Inicio</a></li>
+      <li><a href="#solucion">Solución</a></li>
+      <li><a href="#beneficios">Beneficios</a></li>
+      <li><a href="#equipo">Equipo</a></li>
+      <li><a href="#precios">Precios</a></li>
+      <li><a href="#app-movil">App Móvil</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <button class="menu-hamburguesa-landing" onclick="toggleMenuLanding()">
+      <img alt="Menú" src="assets/images/menublack.png">
+    </button>
+  </nav>
+</header>
+
+<!-- MENÚ LATERAL MÓVIL CON ICONOS -->
+<div class="menu-lateral-landing" id="menuLateralLanding">
+  <div class="cabecera-menu-landing">
+    <h3>Menú</h3>
+    <button class="btn-cerrar-menu" onclick="toggleMenuLanding()">&times;</button>
+  </div>
+  <div class="lista-enlaces-landing">
+    <a href="#inicio">
+      <img alt="Icono" src="assets/images/inicio.png" width="20"> Inicio
+    </a>
+    <a href="#solucion">
+      <img alt="Icono" src="assets/images/solucion.png" width="20"> Solución
+    </a>
+    <a href="#beneficios">
+      <img alt="Icono" src="assets/images/beneficios.png" width="20"> Beneficios
+    </a>
+    <a href="#equipo">
+      <img alt="Icono" src="assets/images/equipo.png" width="20"> Equipo
+    </a>
+    <a href="#precios">
+      <img alt="Icono" src="assets/images/precio.png" width="20"> Precios
+    </a>
+    <a href="#app-movil">
+      <img alt="Icono" src="assets/images/appmovilblack.png" width="20"> App Móvil
+    </a>
+    <a href="#contacto">
+      <img alt="Icono" src="assets/images/phone black.png" width="20"> Contacto
+    </a>
+    <!-- Enlace extra de Iniciar Sesión -->
+    <a href="login.html" style="color: #2563eb; font-weight: bold; border-top: 1px solid #eee;">
+      <img alt="Icono" src="assets/images/userblack.png" width="20"> Iniciar Sesión
+    </a>
+  </div>
+</div>
+<div class="overlay-menu-landing" id="overlayMenuLanding" onclick="toggleMenuLanding()"></div>
+<main>
+  <section class="seccion-inicio" id="inicio">
+    <div class="contenedor-inicio">
+      <div class="texto-inicio">
+        <h1>
+          Optimizamos la
+          <span class="resaltado-oro">Cadena de Frío</span> para salvar
+          vidas
+        </h1>
+        <p>
+          ColdChain es una solución integral desarrollada por estudiantes de
+          UPC que garantiza la calidad de insumos médicos críticos como
+          vacunas y sangre durante su transporte y almacenamiento.
+        </p>
+        <div class="estadisticas-inicio">
+          <div><strong>99%</strong><span>Precisión</span></div>
+          <div><strong>24/7</strong><span>Monitoreo</span></div>
+          <div><strong>100+</strong><span>Hospitales</span></div>
+        </div>
+
+        <!-- AQUÍ ESTÁ EL CAMBIO: Botón único para volver al panel -->
+        <div class="botones-inicio">
+          <a class="boton boton-primario" href="monitoreo.html"
+          >Volver al Panel de Control</a
+          >
+        </div>
+      </div>
+      <div class="imagen-inicio">
+        <img alt="Vacuna siendo preparada" src="assets/images/VACUNA.png"/>
+        <div class="distintivo distintivo-iot">
+          <img alt="Icono IoT" src="assets/images/1.png"/>
+          <span
+          >En tiempo real <br/>
+                Monitoreo IoT</span
+          >
+        </div>
+        <div class="distintivo distintivo-temp">
+          <img alt="Icono Temperatura" src="assets/images/ICON%202.png"/>
+          <span>Temperatura óptima<br/>2 - 8°C</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion-comun seccion-gris" id="solucion">
+    <div class="contenedor">
+      <h2 class="titulo-seccion">Solución</h2>
+      <p class="subtitulo-seccion">
+        Nuestra plataforma combina dispositivos IoT de última generación con
+        software inteligente para ofrecer visibilidad completa y control
+        automatizado de la cadena de frío.
+      </p>
+
+      <!-- Botones de Pestañas -->
+      <div class="pestanas-solucion">
+        <button
+          class="boton-pestana activo"
+          onclick="abrirPestana(event, 'vision')"
+        >
+          Visión General
+        </button>
+        <button
+          class="boton-pestana"
+          onclick="abrirPestana(event, 'hardware')"
+        >
+          Hardware
+        </button>
+        <button
+          class="boton-pestana"
+          onclick="abrirPestana(event, 'software')"
+        >
+          Software
+        </button>
+      </div>
+
+      <!-- CONTENIDO 1: VISIÓN GENERAL -->
+      <div class="contenido-solucion tab-content activo" id="vision">
+        <div class="texto-solucion">
+          <h3>Una solución, múltiples beneficios</h3>
+          <p>
+            ColdChain integra sensores IoT avanzados con una plataforma de
+            software robusta para proporcionar monitoreo continuo, alertas
+            inteligentes y trazabilidad completa de productos médicos
+            críticos.
+          </p>
+          <div class="cuadricula-beneficios-solucion">
+            <div class="tarjeta-beneficio color-azul-claro">
+              ± 0.1°C <br/><span>Precisión de sensores</span>
+            </div>
+            <div class="tarjeta-beneficio color-verde-claro">
+              24/7 <br/><span>Monitoreo continuo</span>
+            </div>
+            <div class="tarjeta-beneficio color-morado-claro">
+              &lt; 30s <br/><span>Tiempo de alerta</span>
+            </div>
+            <div class="tarjeta-beneficio color-naranja-claro">
+              100% <br/><span>Trazabilidad</span>
+            </div>
+          </div>
+        </div>
+        <div class="imagen-solucion">
+          <img alt="Equipamiento de laboratorio" src="assets/images/LAB.png"/>
+        </div>
+      </div>
+
+      <!-- CONTENIDO 2: HARDWARE -->
+      <div class="contenido-solucion tab-content" id="hardware">
+        <div class="bloque-completo">
+          <h3 class="titulo-centro">Hardware Especializado</h3>
+          <p class="subtitulo-centro">
+            Dispositivos IoT diseñados específicamente para entornos médicos
+            críticos.
+          </p>
+
+          <!-- Grid de 4 tarjetas azules -->
+          <div class="grid-cuatro">
+            <div class="tarjeta-feature">
+              <div class="icono-feature azul">
+                <img alt="Temp" src="assets/images/temppwhite.png"/>
+              </div>
+              <h4>Sensores de Precisión</h4>
+              <p>
+                Monitoreo continuo de temperatura y humedad con precisión de
+                ±0.1°C.
+              </p>
+            </div>
+            <div class="tarjeta-feature">
+              <div class="icono-feature azul">
+                <img alt="Wifi" src="assets/images/wifiwhite.png"/>
+              </div>
+              <h4>Conectividad IoT</h4>
+              <p>
+                Transmisión de datos en tiempo real mediante protocolos
+                seguros.
+              </p>
+            </div>
+            <div class="tarjeta-feature">
+              <div class="icono-feature azul">
+                <img alt="Pulse" src="assets/images/signalwhite.png"/>
+              </div>
+              <h4>Alertas Automáticas</h4>
+              <p>
+                Notificaciones instantáneas ante cualquier desviación
+                crítica.
+              </p>
+            </div>
+            <div class="tarjeta-feature">
+              <div class="icono-feature azul">
+                <img alt="Shield" src="assets/images/shieldwhite.png"/>
+              </div>
+              <h4>Diseño Robusto</h4>
+              <p>
+                Resistente a condiciones adversas y certificado para uso
+                médico.
+              </p>
+            </div>
+          </div>
+
+          <!-- Sección Especificaciones Técnicas -->
+          <div class="specs-container">
+            <div class="specs-texto">
+              <h3>Especificaciones Técnicas</h3>
+              <ul class="lista-specs">
+                <li>
+                  <span>Rango de temperatura:</span>
+                  <span>-40°C a +85°C</span>
+                </li>
+                <li><span>Precisión:</span> <span>±0.1°C</span></li>
+                <li>
+                  <span>Conectividad:</span> <span>WiFi, 4G, LoRaWAN</span>
+                </li>
+                <li><span>Batería:</span> <span>Hasta 5 años</span></li>
+                <li>
+                  <span>Certificaciones:</span> <span>CE, FCC, FDA</span>
+                </li>
+              </ul>
+            </div>
+            <div class="specs-imagen">
+              <img
+                alt="Dispositivo Hardware Closeup"
+                src="assets/images/procesador.jpg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONTENIDO 3: SOFTWARE -->
+      <div class="contenido-solucion tab-content" id="software">
+        <div class="bloque-completo">
+          <h3 class="titulo-centro">Plataforma Inteligente</h3>
+          <p class="subtitulo-centro">
+            Software avanzado con inteligencia artificial que convierte
+            datos en insights.
+          </p>
+
+          <!-- Grid de 4 tarjetas verdes -->
+          <div class="grid-cuatro">
+            <div class="tarjeta-feature">
+              <div class="icono-feature verde">
+                <img alt="Dash" src="assets/images/graphicswhite.png"/>
+              </div>
+              <h4>Dashboard Intuitivo</h4>
+              <p>
+                Visualización clara y en tiempo real del estado de toda la
+                cadena.
+              </p>
+            </div>
+            <div class="tarjeta-feature">
+              <div class="icono-feature verde">
+                <img alt="Geo" src="assets/images/gpswhite.png"/>
+              </div>
+              <h4>Geolocalización</h4>
+              <p>Seguimiento GPS de productos durante el transporte.</p>
+            </div>
+            <div class="tarjeta-feature">
+              <div class="icono-feature verde">
+                <img alt="Alert" src="assets/images/notification.png"/>
+              </div>
+              <h4>Sistema de Alertos</h4>
+              <p>
+                Notificaciones multicanal personalizables por criticidad.
+              </p>
+            </div>
+            <div class="tarjeta-feature">
+              <div class="icono-feature verde">
+                <img alt="App" src="assets/images/movilwhite.png"/>
+              </div>
+              <h4>App Móvil</h4>
+              <p>
+                Acceso completo desde dispositivos móviles para supervisión
+                remota.
+              </p>
+            </div>
+          </div>
+
+          <!-- Sección Funcionalidades Avanzadas (Fondo azul claro) -->
+          <div class="avanzadas-container">
+            <h3 class="titulo-centro">Funcionalidades Avanzadas</h3>
+            <div class="grid-tres-centro">
+              <div class="item-avanzado">
+                <div class="icono-circulo blanco">
+                  <img alt="AI" src="assets/images/chipblue.png"/>
+                </div>
+                <h4>IA Predictiva</h4>
+                <p>
+                  Algoritmos que predicen posibles fallas antes de que
+                  ocurran.
+                </p>
+              </div>
+              <div class="item-avanzado">
+                <div class="icono-circulo blanco">
+                  <img alt="Chart" src="assets/images/graphicsgreen.png"/>
+                </div>
+                <h4>Analytics Avanzado</h4>
+                <p>
+                  Reportes detallados y métricas de rendimiento en tiempo
+                  real.
+                </p>
+              </div>
+              <div class="item-avanzado">
+                <div class="icono-circulo blanco">
+                  <img alt="Sec" src="assets/images/shieldpurple.png"/>
+                </div>
+                <h4>Seguridad Total</h4>
+                <p>
+                  Encriptación de extremo a extremo y cumplimiento HIPAA.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion-comun" id="beneficios">
+    <div class="contenedor">
+      <h2 class="titulo-seccion">Beneficios Comprobados</h2>
+      <p class="subtitulo-seccion">
+        Nuestros clientes han experimentado mejoras significativas en
+        eficiencia, reducción de costos y calidad del servicio.
+      </p>
+      <div class="beneficios-comprobados">
+        <div class="tarjeta-beneficio-principal">
+          <div class="fondo-icono color-fondo-verde">
+            <img alt="Icono" src="assets/images/arrow%20up.png"/>
+          </div>
+          <h3>Reducción de Pérdidas</h3>
+          <p class="metrica">95% <span> mejora </span></p>
+          <p class="descripcion">
+            Hasta 95% menos pérdidas de productos por ruptura de cadena de
+            frío.
+          </p>
+        </div>
+        <div class="tarjeta-beneficio-principal">
+          <div class="fondo-icono color-fondo-azul">
+            <img alt="Icono" src="assets/images/time.png"/>
+          </div>
+          <h3>Respuesta Inmediata</h3>
+          <p class="metrica">&lt; 30s <span>mejora</span></p>
+          <p class="descripcion">
+            Alertas en tiempo real permiten acciones correctivas
+            instantáneas.
+          </p>
+        </div>
+        <div class="tarjeta-beneficio-principal">
+          <div class="fondo-icono color-fondo-morado">
+            <img alt="Icono" src="assets/images/money.png"/>
+          </div>
+          <h3>ROI Comprobado</h3>
+          <p class="metrica">300% <span>mejora</span></p>
+          <p class="descripcion">
+            Retorno de inversión visible desde el primer mes de
+            implementación.
+          </p>
+        </div>
+        <div class="tarjeta-beneficio-principal">
+          <div class="fondo-icono color-fondo-naranja">
+            <img alt="Icono" src="assets/images/shield.png"/>
+          </div>
+          <h3>Cumplimiento Total</h3>
+          <p class="metrica">100% <span>mejora</span></p>
+          <p class="descripcion">
+            Garantía de cumplimiento con normativas internacionales de
+            salud.
+          </p>
+        </div>
+      </div>
+
+      <h3 class="titulo-seccion-secundario">
+        Sectores que Confiaron en Nosotros
+      </h3>
+      <div class="sectores">
+        <div class="tarjeta-sector">
+          <img alt="Icono Hospitales" src="assets/images/hospital.png"/>
+          <h4>Hospitales y Clínicas</h4>
+          <p>Protección de medicamentos y vacunas críticas</p>
+          <span>50+ implementaciones</span>
+        </div>
+        <div class="tarjeta-sector">
+          <img alt="Icono Laboratorios" src="assets/images/bata.png"/>
+          <h4>Laboratorios</h4>
+          <p>Preservación de muestras y reactivos sensibles</p>
+          <span>25+ implementaciones</span>
+        </div>
+        <div class="tarjeta-sector">
+          <img alt="Icono Farmacéuticas" src="assets/images/pills.png"/>
+          <h4>Farmacéuticas</h4>
+          <p>Control de calidad en distribución y almacenamiento</p>
+          <span>15+ implementaciones</span>
+        </div>
+      </div>
+
+      <div class="porque-nosotros">
+        <h3 class="titulo-seccion-secundario">
+          ¿Por qué elegir ColdChain?
+        </h3>
+        <div class="grupo-tarjetas">
+          <div class="tarjeta-simple">
+            <img alt="Check" src="assets/images/check.png"/>
+            <div>
+              Implementación Rápida<span
+            >Instalación en menos de 48 horas</span
+            >
+            </div>
+          </div>
+          <div class="tarjeta-simple">
+            <img alt="Check" src="assets/images/check.png"/>
+            <div>
+              Soporte 24/7<span>Asistencia técnica permanente</span>
+            </div>
+          </div>
+          <div class="tarjeta-simple">
+            <img alt="Check" src="assets/images/check.png"/>
+            <div>Escalabilidad<span>Crece con tu organización</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion-comun seccion-gris" id="equipo">
+    <div class="contenedor">
+      <h2 class="titulo-seccion">Nuestro Equipo</h2>
+      <!-- CONTENEDOR DE VIDEO -->
+      <div class="video-equipo-container">
+        <div class="video-responsive-wrapper">
+          <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen frameborder="0"
+                  height="315" referrerpolicy="strict-origin-when-cross-origin"
+                  src="https://www.youtube.com/embed/LQqz-sqlIA0?si=kER8d2Tu3D1SciFP"
+                  title="YouTube video player" width="560"></iframe>
+        </div>
+        <p class="video-caption">Conoce a los expertos detrás de ColdChain</p>
+      </div>
+
+      <div class="cuadricula-equipo">
+        <div class="miembro-equipo">
+          <img alt="Sergio Goycochea" src="assets/images/sergio.png"/>
+          <p>
+            Goycochea Cruzado, Sergio Matias<span class="puesto"
+          >Director Ejecutivo (CEO)</span
+          >
+          </p>
+        </div>
+        <div class="miembro-equipo">
+          <img alt="Cesar Huanca" src="assets/images/cesar.png"/>
+          <p>
+            Huanca Maza, Cesar Andre<span class="puesto"
+          >Director de Tecnología (CTO)</span
+          >
+          </p>
+        </div>
+        <div class="miembro-equipo">
+          <img alt="Odar Alcocer" src="assets/images/odar.png"/>
+          <p>
+            Alcocer Vásquez, Odar Javier<span class="puesto"
+          >Director de Producto y UX (CPO)</span
+          >
+          </p>
+        </div>
+        <div class="miembro-equipo">
+          <img alt="Rolando Quevedo" src="assets/images/rolando.png"/>
+          <p>
+            Quevedo Calizaya, Rolando Aarón<span class="puesto"
+          >Director de Operaciones (COO)</span
+          >
+          </p>
+        </div>
+        <div class="miembro-equipo">
+          <img alt="Diego Rojas" src="assets/images/diego.png"/>
+          <p>
+            Rojas Díaz, Diego Enrique<span class="puesto"
+          >Ingeniero Principal de Datos (Lead Data Engineer)</span
+          >
+          </p>
+        </div>
+        <div class="miembro-equipo">
+          <img alt="Adriel Flores" src="assets/images/adriel.png"/>
+          <p>
+            Flores Masias, Adriel Jose<span class="puesto"
+          >Director de Marketing (CMO)</span
+          >
+          </p>
+        </div>
+      </div>
+      <div class="mision-vision">
+        <div class="tarjeta-mision-vision">
+          <h3>Nuestra Misión</h3>
+          <p>
+            Democratizar el acceso a tecnología de monitoreo de cadena de
+            frío, garantizando que productos médicos críticos mantengan su
+            calidad desde el laboratorio hasta el paciente.
+          </p>
+        </div>
+        <div class="tarjeta-mision-vision">
+          <h3>Nuestra Visión</h3>
+          <p>
+            Ser la empresa líder en Latinoamérica en soluciones IoT para el
+            sector salud, reconocida por nuestra innovación tecnológica y el
+            impacto positivo en la vida de millones de personas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion-comun" id="precios">
+    <div class="contenedor">
+      <h2 class="titulo-seccion">
+        Elige el Plan Perfecto para tu Organización
+      </h2>
+      <p class="subtitulo-seccion">
+        Soluciones flexibles diseñadas para adaptarse a las necesidades de
+        tu negocio, desde consultorios independientes hasta grandes redes
+        hospitalarias.
+      </p>
+      <div class="planes-precios">
+        <div class="plan plan-individual">
+          <div class="encabezado-plan">
+            <img alt="Individual" src="assets/images/user.png"/>
+            <h3>Individual</h3>
+          </div>
+          <p>Perfecto para pequeñas clínicas y consultorios médicos</p>
+          <div class="precio">GRATIS</div>
+          <a class="boton boton-azul" href="monitoreo.html"
+          >EMPEZAR GRATIS</a
+          >
+          <div class="contenedor-caracteristicas">
+            <h4>Incluye:</h4>
+            <ul class="caracteristicas caracteristicas-individual">
+              <li>Hasta 5 sensores IoT</li>
+              <li>Dashboard básico</li>
+              <li>Alertas por email y SMS</li>
+              <li>Almacenamiento de datos 15GB</li>
+              <li>Soporte por email (48h)</li>
+              <li>1 usuario</li>
+              <li>App móvil básica</li>
+              <li>Reportes mensuales</li>
+            </ul>
+          </div>
+        </div>
+        <div class="plan plan-empresarial destacado">
+          <div class="encabezado-plan">
+            <img alt="Empresarial" src="assets/images/build.png"/>
+            <h3>Empresarial</h3>
+          </div>
+          <p>Ideal para hospitales, laboratorios y distribuidoras</p>
+          <div class="precio">$300 / mes</div>
+          <button class="boton boton-morado" onclick="abrirModalPago()">
+            COMPRAR
+          </button>
+          <div class="contenedor-caracteristicas">
+            <h4>Incluye:</h4>
+            <ul class="caracteristicas caracteristicas-empresarial">
+              <li>Hasta 50 sensores IoT</li>
+              <li>Dashboard avanzado con IA</li>
+              <li>Alertas multicanal 24/7</li>
+              <li>Almacenamiento ilimitado</li>
+              <li>Soporte prioritario 24/7</li>
+              <li>Usuarios ilimitados</li>
+              <li>App móvil completa</li>
+              <li>Reportes personalizados</li>
+              <li>Integraciones API</li>
+              <li>Capacitación incluida</li>
+              <li>Geolocalización GPS</li>
+              <li>Analytics predictivo</li>
+            </ul>
+          </div>
+        </div>
+        <div class="plan plan-corporativo">
+          <div class="encabezado-plan">
+            <img alt="Corporativo" src="assets/images/company.png"/>
+            <h3>Corporativo</h3>
+          </div>
+          <p>Solución a medida para grandes organizaciones de salud</p>
+          <div class="precio">Personalizado</div>
+          <button class="boton boton-naranja" onclick="abrirModalVentas()">
+            CONTACTAR VENTAS
+          </button>
+          <div class="contenedor-caracteristicas">
+            <h4>Incluye:</h4>
+            <ul class="caracteristicas caracteristicas-corporativo">
+              <li>Sensores IoT ilimitados</li>
+              <li>Plataforma white-label</li>
+              <li>IA y ML personalizados</li>
+              <li>Infraestructura dedicada</li>
+              <li>Soporte técnico dedicado</li>
+              <li>Gestión de cuentas</li>
+              <li>SLA garantizado 99.9%</li>
+              <li>Auditorías y cumplimiento</li>
+              <li>Integración ERP/SAP</li>
+              <li>Desarrollo personalizado</li>
+              <li>Consultoría estratégica</li>
+              <li>Capacitación avanzada</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion-comun seccion-app" id="app-movil">
+    <div class="contenedor contenido-app">
+      <div class="texto-app">
+        <h2 class="titulo-seccion-izquierda">Nuestra App Móvil</h2>
+        <p>
+          Controla tu cadena de frío desde la palma de tu mano. Disponible
+          para iOS y Android, nuestra aplicación móvil te mantiene conectado
+          24/7 con tus productos médicos críticos.
+        </p>
+        <div class="caracteristicas-app">
+          <div class="item-caracteristica-app">
+            <img alt="Icono Alerta" src="assets/images/notificacion.png"/>
+            <div>
+              <h4>Alertas en Tiempo Real</h4>
+              <p>
+                Recibe notificaciones instantáneas sobre cambios de
+                temperatura.
+              </p>
+            </div>
+          </div>
+          <div class="item-caracteristica-app">
+            <img alt="Icono Dashboard" src="assets/images/graficos.png"/>
+            <div>
+              <h4>Dashboard Móvil</h4>
+              <p>
+                Monitorea tus sensores desde cualquier lugar con gráficos en
+                vivo.
+              </p>
+            </div>
+          </div>
+          <div class="item-caracteristica-app">
+            <img alt="Icono Geolocalización" src="assets/images/geo.png"/>
+            <div>
+              <h4>Geolocalización</h4>
+              <p>Rastrea la ubicación de tus productos en tránsito.</p>
+            </div>
+          </div>
+          <div class="item-caracteristica-app">
+            <img alt="Icono Interfaz" src="assets/images/interfaz.png"/>
+            <div>
+              <h4>Interfaz Intuitiva</h4>
+              <p>
+                Diseño simple y fácil de usar para acceso rápido a la
+                información.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="tiendas-app">
+          <a href="https://www.apple.com/la/app-store/" target="_blank">
+            <img
+              alt="Descargar en App Store"
+              height="80"
+              src="assets/images/app%20store.png"
+              width="240"
+            />
+          </a>
+          <a
+            href="https://play.google.com/store/games?hl=es_PE&pli=1"
+            target="_blank"
+          >
+            <img
+              alt="Descargar en Google Play"
+              height="80"
+              src="assets/images/play%20store.png"
+              width="238"
+            />
+          </a>
+        </div>
+      </div>
+
+      <!-- CARRUSEL DE IMÁGENES Y VIDEO -->
+      <div class="imagen-app carousel-container">
+        <!-- Slide 1: Video YouTube -->
+        <div class="mySlides fade" style="display: block">
+          <div class="numbertext">1 / 3</div>
+
+          <div class="video-container-full">
+            <iframe
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              frameborder="0"
+              referrerpolicy="strict-origin-when-cross-origin"
+              src="https://www.youtube.com/embed/IMOsKC_O8lM?si=Fe98buFNcSUfmJnK"
+              title="YouTube video player"
+            >
+            </iframe>
+          </div>
+
+          <div class="text-caption">Sobre el producto:</div>
+        </div>
+        <!-- Slide 2: Imagen App (Ejemplo) -->
+        <div class="mySlides fade" style="display: none">
+          <div class="numbertext">2 / 3</div>
+          <img
+            src="assets/images/metricas.png"
+            style="width: 100%; border-radius: 20px"
+          />
+          <div class="text-caption">Campañas</div>
+        </div>
+
+        <!-- Slide 3: Otra Imagen (Puedes poner otra captura aquí) -->
+        <div class="mySlides fade" style="display: none">
+          <div class="numbertext">3 / 3</div>
+          <!-- He reutilizado una imagen, cambia el src por otra captura si tienes -->
+          <img
+            src="assets/images/raar.png"
+            style="width: 100%; border-radius: 20px"
+          />
+          <div class="text-caption">Vista de Métricas</div>
+        </div>
+
+        <!-- Botones de navegación -->
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
+        <!-- Puntos indicadores -->
+        <div style="text-align: center; margin-top: 10px">
+          <span class="dot active" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="seccion-comun" id="contacto">
+    <div class="contenedor">
+      <h2 class="titulo-seccion">
+        ¿Listo para Revolucionar tu Cadena de Frío?
+      </h2>
+      <p class="subtitulo-seccion">
+        Programa una demostración gratuita y descubre cómo ColdChain puede
+        transformar la gestión de tus productos médicos críticos.
+      </p>
+
+      <div class="layout-contacto">
+        <!-- COLUMNA IZQUIERDA: FORMULARIO PRINCIPAL -->
+        <div class="principal-contacto">
+          <div class="tarjeta tarjeta-formulario">
+            <h3>Solicitar Información</h3>
+            <!-- Añadimos ID al formulario para manejarlo con JS -->
+            <form
+              id="form-solicitud"
+              onsubmit="validarYEnviarSolicitud(event)"
+            >
+              <div class="fila-formulario">
+                <div class="grupo-formulario">
+                  <label for="nombre">Nombre completo *</label>
+                  <input
+                    id="nombre"
+                    name="nombre"
+                    placeholder="Tu nombre"
+                    type="text"
+                  />
+                  <small class="error-msg" id="error-nombre"
+                  >Este campo es obligatorio</small
+                  >
+                </div>
+                <div class="grupo-formulario">
+                  <label for="email">Email corporativo *</label>
+                  <input
+                    id="email"
+                    name="email"
+                    placeholder="nombre@empresa.com"
+                    type="email"
+                  />
+                  <small class="error-msg" id="error-email"
+                  >Este campo es obligatorio</small
+                  >
+                </div>
+              </div>
+              <div class="grupo-formulario">
+                <label for="organizacion">Organización *</label>
+                <input
+                  id="organizacion"
+                  name="organizacion"
+                  placeholder="Hospital, Clínica, laboratorio..."
+                  type="text"
+                />
+                <small class="error-msg" id="error-org"
+                >Este campo es obligatorio</small
+                >
+              </div>
+              <div class="grupo-formulario">
+                <label for="necesidad"
+                >Cuéntanos sobre tu necesidad *</label
+                >
+                <textarea
+                  id="necesidad"
+                  name="necesidad"
+                  placeholder="Describe tu cadena de suministro actual..."
+                ></textarea>
+                <small class="error-msg" id="error-nec"
+                >Este campo es obligatorio</small
+                >
+              </div>
+
+              <button class="boton boton-enviar" type="submit">
+                <img alt="Enviar" src="assets/images/send.png"/> Enviar solicitud
+              </button>
+              <p class="nota-formulario">
+                * Campos obligatorios. Respetamos tu privacidad.
+              </p>
+            </form>
+          </div>
+        </div>
+
+        <!-- COLUMNA DERECHA: INFO Y AYUDA -->
+        <div class="lateral-contacto">
+          <div class="tarjeta tarjeta-info-contacto">
+            <h3>Información de Contacto</h3>
+            <ul>
+              <li>
+                <img alt="Email" src="assets/images/gmail.png"/>
+                <div>
+                  <strong>Email</strong><span>contacto@coldchain.pe</span>
+                </div>
+              </li>
+              <li>
+                <img alt="Teléfono" src="assets/images/phone black.png"/>
+                <div>
+                  <strong>Teléfono</strong><span>+51 999 888 777</span>
+                </div>
+              </li>
+              <li>
+                <img alt="Ubicación" src="assets/images/maps.png"/>
+                <div>
+                  <strong>Ubicación</strong><span>San Isidro, Lima</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="ayuda-inmediata">
+            <h4>¿Necesitas ayuda inmediata?</h4>
+            <p>
+              Nuestro equipo está disponible para consultas urgentes sobre
+              su cadena de frío.
+            </p>
+            <!-- Botón llama a la función de abrir modal -->
+            <button
+              class="boton boton-blanco"
+              onclick="abrirAtencionCliente()"
+            >
+              <img alt="Llamar" src="assets/images/phone blue.png"/> Contactarse
+              ahora
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- === MODALES (Ventanas Emergentes) === -->
+
+<!-- 1. Modal Solicitud Enviada (Auto-cierre) -->
+<div class="modal-overlay-2" id="modal-solicitud-exito">
+  <div class="modal-box-2 success">
+    <div class="icono-check-2">✔</div>
+    <h3>Solicitud Enviada</h3>
+    <p>Nos pondremos en contacto contigo pronto.</p>
+  </div>
+</div>
+
+<!-- 2. Modal Atención al Cliente (Formulario Emergencia) -->
+<div class="modal-overlay-2" id="modal-atencion">
+  <div class="modal-box-2 atencion">
+    <button class="btn-cerrar-modal-2" onclick="cerrarAtencion()">
+      &times;
+    </button>
+
+    <!-- TÍTULO QUE AHORA SE CENTRARÁ POR CSS -->
+    <h3>Atención al Cliente</h3>
+    <p>Por favor confirma tus datos y describe la urgencia.</p>
+
+    <form onsubmit="enviarEmergencia(event)">
+      <div class="campo-atencion">
+        <label>Usuario</label>
+        <!-- ID que usa el JS para rellenar -->
+        <input
+          class="input-readonly"
+          id="atencion-usuario"
+          readonly
+          type="text"
+        />
+      </div>
+      <div class="campo-atencion">
+        <label>Correo</label>
+        <!-- ID que usa el JS para rellenar -->
+        <input
+          class="input-readonly"
+          id="atencion-correo"
+          readonly
+          type="text"
+        />
+      </div>
+      <div class="campo-atencion">
+        <label>Detalle de Emergencia *</label>
+        <textarea
+          id="atencion-msg"
+          placeholder="Describe el problema crítico..."
+          required
+        ></textarea>
+      </div>
+      <button class="boton boton-morado" style="width: 100%" type="submit">
+        Enviar Emergencia
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- 3. Modal Envío Exitoso (Emergencia) -->
+<div class="modal-overlay-2" id="modal-emergencia-exito">
+  <div class="modal-box-2 success">
+    <div class="icono-check-2 naranja">!</div>
+    <h3>Envío Exitoso</h3>
+    <p>Un especialista revisará tu caso de inmediato.</p>
+    <button
+      class="boton boton-azul"
+      onclick="cerrarEmergenciaExito()"
+      style="margin-top: 10px; padding: 0.5rem 1rem"
+    >
+      Aceptar
+    </button>
+  </div>
+</div>
+<!-- 2. MODAL PAGO (Empresarial) -->
+<div class="modal-overlay-landing" id="modal-pago">
+  <div class="modal-box-landing pago">
+    <button class="btn-cerrar-modal" onclick="cerrarModal('modal-pago')">
+      &times;
+    </button>
+
+    <!-- TÍTULO CENTRADO CORREGIDO -->
+    <div style="text-align: center; margin-bottom: 1rem">
+      <h3 style="margin: 0; font-size: 1.8rem; line-height: 1.2">
+        Pagar Suscripción
+      </h3>
+      <h3 style="margin: 0; font-size: 1.4rem; color: #555">EMPRESARIAL</h3>
+    </div>
+
+    <p class="monto-total">Total a pagar: <strong>$300.00</strong></p>
+
+    <form onsubmit="procesarPago(event)">
+      <div class="campo-pago">
+        <label>Nombre en la tarjeta</label>
+        <input
+          class="input-pago"
+          placeholder="Como aparece en la tarjeta"
+          required
+          type="text"
+        />
+      </div>
+      <div class="campo-pago">
+        <label>Número de Tarjeta</label>
+        <input
+          class="input-pago"
+          maxlength="19"
+          placeholder="0000 0000 0000 0000"
+          required
+          type="text"
+        />
+      </div>
+
+      <!-- Fila de Expiración y CVC -->
+      <div class="fila-pago">
+        <div class="campo-pago">
+          <label>Expiración</label>
+          <input
+            class="input-pago"
+            maxlength="5"
+            placeholder="MM/AA"
+            required
+            style="text-align: center"
+            type="text"
+          />
+        </div>
+        <div class="campo-pago">
+          <label>CVC</label>
+          <input
+            class="input-pago"
+            maxlength="3"
+            placeholder="123"
+            required
+            style="text-align: center"
+            type="password"
+          />
+        </div>
+      </div>
+
+      <button class="boton boton-morado btn-pagar" type="submit">
+        PAGAR AHORA
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- 3. MODAL ÉXITO PAGO -->
+<div class="modal-overlay-landing" id="modal-pago-exito">
+  <div class="modal-box-landing">
+    <div class="icono-check">✔</div>
+    <h3>¡Compra Exitosa!</h3>
+    <p>Redirigiendo a tu panel de control...</p>
+  </div>
+</div>
+
+<!-- 4. MODAL VENTAS (Corporativo) -->
+<div class="modal-overlay-landing" id="modal-ventas">
+  <div class="modal-box-landing">
+    <button class="btn-cerrar-modal" onclick="cerrarModal('modal-ventas')">
+      &times;
+    </button>
+    <h3>Contactar a Ventas</h3>
+    <p>Déjanos tu correo y un asesor te escribirá.</p>
+    <form onsubmit="enviarCorreoVentas(event)">
+      <input
+        class="input-pago"
+        placeholder="tu@correo.com"
+        required
+        style="margin-bottom: 1rem"
+        type="email"
+      />
+      <button class="boton boton-naranja btn-pagar" type="submit">
+        ENVIAR
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- 5. MODAL ÉXITO VENTAS -->
+<div class="modal-overlay-landing" id="modal-ventas-exito">
+  <div class="modal-box-landing">
+    <div class="icono-check naranja">✔</div>
+    <h3>Envío Exitoso</h3>
+    <p>Revisa tu bandeja de entrada pronto.</p>
+  </div>
+</div>
+<footer class="pie-de-pagina">
+  <div class="contenedor-pie">
+    <div class="pie-izquierda">
+      <img
+        alt="Logo ColdChain"
+        class="logo-pie"
+        src="assets/images/Coldchain.png"
+      />
+      <p>© 2025 ColdChain. Todos los derechos reservados.</p>
+    </div>
+    <div class="pie-derecha">
+      <a href="assets/Documentos/Terminos%20de%20Servicio.pdf">Términos de Servicio</a>
+      <a href="assets/Documentos/Politica%20de%20Privacidad.pdf"
+      >Política de Privacidad</a
+      >
+      <a href="assets/Documentos/Proteccion%20de%20Datos.pdf">Protección de Datos</a>
+    </div>
+  </div>
+</footer>
+<!-- VINCULAR NUEVO SCRIPT -->
+<script src="assets/scripts/landing.js"></script>
+<script src="assets/scripts/script.js"></script>
+<script src="assets/scripts/script2.js"></script>
+</body>
+</html>

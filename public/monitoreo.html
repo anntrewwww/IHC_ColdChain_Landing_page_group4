@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Panel de Control - ColdChain</title>
+  <link href="favicon.ico" rel="icon" type="image/x-icon">
+  <link href="assets/images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+  <link href="assets/images/android-chrome-192x192.png" rel="icon" sizes="192x192" type="image/png">
+  <link href="assets/images/android-chrome-512x512.png" rel="icon" sizes="512x512" type="image/png">
+  <link href="assets/styles/styles.css" rel="stylesheet"/>
+  <link href="assets/styles/Pie.css" rel="stylesheet"/>
+  <link href="assets/styles/pages.css" rel="stylesheet"/>
+  <link href="assets/styles/dashboard.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Ruluko&family=Ysabeau+Office:ital,wght@0,1..1000;1,1..1000&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+<header class="encabezado-principal">
+  <nav class="barra-navegacion">
+    <!-- Logo a la izquierda -->
+    <a class="logo" href="index2.html">
+      <img alt="Logo ColdChain" src="assets/images/Coldchain.png"/>
+      <span>ColdChain</span>
+    </a>
+
+    <!-- Grupo Derecha: Usuario + Menú Hamburguesa -->
+    <div class="iconos-header-dashboard">
+      <!-- Botón Usuario -->
+      <a class="btn-usuario-header" href="perfil.html" title="Perfil">
+        <img alt="Usuario" src="assets/images/userblack.png"/>
+      </a>
+
+      <!-- Botón Menú Hamburguesa -->
+      <button class="btn-menu-hamburguesa" onclick="toggleMenu()">
+        <img alt="Menú" src="assets/images/menublack.png"/>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<!-- MENÚ LATERAL -->
+<div class="menu-lateral" id="sideMenu">
+  <div class="cabecera-menu">
+    <h3>Menú</h3>
+    <button class="btn-cerrar" onclick="toggleMenu()">&times;</button>
+  </div>
+  <ul class="lista-menu-lateral">
+    <li>
+      <a href="index2.html#inicio"
+      ><img src="assets/images/inicio.png" width="20"/> Inicio</a
+      >
+    </li>
+    <li>
+      <a href="index2.html#solucion"
+      ><img src="assets/images/solucion.png" width="20"/> Solución</a
+      >
+    </li>
+    <li>
+      <a href="index2.html#beneficios"
+      ><img src="assets/images/beneficios.png" width="20"/> Beneficios</a
+      >
+    </li>
+    <li>
+      <a href="index2.html#equipo"
+      ><img src="assets/images/equipo.png" width="20"/> Equipo</a
+      >
+    </li>
+    <li>
+      <a href="index2.html#precios"
+      ><img src="assets/images/precio.png" width="20"/> Precios</a
+      >
+    </li>
+    <li>
+      <a href="index2.html#app-movil"
+      ><img src="assets/images/appmovilblack.png" width="20"/> App Movil</a
+      >
+    </li>
+    <li>
+      <a href="index2.html#contacto"
+      ><img src="assets/images/phone black.png" width="20"/> Contacto</a
+      >
+    </li>
+  </ul>
+</div>
+<div class="menu-overlay" id="menuOverlay" onclick="toggleMenu()"></div>
+<main>
+  <section class="contenedor dashboard-section">
+    <h1 class="titulo-dashboard">
+      PANEL DE CONTROL <span class="separador-titulo">|</span> MONITOR
+    </h1>
+
+    <!-- KPI Dinámicos -->
+    <div class="grid-kpi">
+      <div class="tarjeta-kpi fade-in">
+        <h3>Total de Equipos</h3>
+        <p class="numero-kpi" id="kpi-total">0</p>
+      </div>
+      <div class="tarjeta-kpi fade-in delay-1">
+        <h3 class="texto-rojo">Críticos</h3>
+        <p class="numero-kpi texto-rojo" id="kpi-critico">0</p>
+      </div>
+      <div class="tarjeta-kpi fade-in delay-2">
+        <h3 class="texto-amarillo">Advertencias</h3>
+        <p class="numero-kpi texto-amarillo" id="kpi-warn">0</p>
+      </div>
+      <div class="tarjeta-kpi fade-in delay-3">
+        <h3 class="texto-verde">Normales</h3>
+        <p class="numero-kpi texto-verde" id="kpi-normal">0</p>
+      </div>
+    </div>
+
+    <div class="barra-accion-equipos">
+      <h2>Equipos de Monitoreo</h2>
+      <a href="generar_equipo.html" style="text-decoration: none">
+        <button class="boton btn-negro btn-generar">Generar Equipo</button>
+      </a>
+    </div>
+
+    <!-- Grilla vacía (se llena con script.js) -->
+    <div class="grid-equipos">
+      <!-- JS Injection Here -->
+    </div>
+  </section>
+</main>
+
+<!-- Chatbot Widget -->
+<div class="chat-widget" id="chat-widget">
+  <div class="chat-header" onclick="toggleChat()">
+    <span>Asistente ColdChain</span>
+    <span>_</span>
+  </div>
+  <div class="chat-body" id="chat-body">
+    <div class="mensaje bot">
+      Hola, soy tu asistente virtual. ¿En qué puedo ayudarte?
+    </div>
+  </div>
+  <div class="chat-footer">
+    <input
+      id="chat-input"
+      onkeypress="handleChat(event)"
+      placeholder="Escribe..."
+      type="text"
+    />
+    <button onclick="enviarMensaje()">➤</button>
+  </div>
+</div>
+<button class="boton-flotante-chat" onclick="toggleChat()">💬</button>
+<!-- VENTANA MODAL PARA ELIMINAR -->
+<!-- MODAL ELIMINAR EQUIPO -->
+<div class="modal-overlay-center" id="modal-borrar-equipo">
+  <!-- ID ESPECÍFICO -->
+  <div class="modal-confirm-box">
+    <h3>¿Eliminar Equipo?</h3>
+    <p>
+      Esta acción no se puede deshacer. El equipo se borrará del monitor.
+    </p>
+    <div class="acciones-modal">
+      <button
+        class="btn-modal-cancelar"
+        onclick="cerrarModalBorrarEquipo()"
+      >
+        Cancelar
+      </button>
+      <button class="btn-modal-eliminar" onclick="ejecutarBorrarEquipo()">
+        Sí, Eliminar
+      </button>
+    </div>
+  </div>
+</div>
+<footer class="pie-de-pagina">
+  <div class="contenedor-pie">
+    <div class="pie-izquierda">
+      <img
+        alt="Logo ColdChain"
+        class="logo-pie"
+        src="assets/images/Coldchain.png"
+      />
+      <p>© 2025 ColdChain. Todos los derechos reservados.</p>
+    </div>
+    <div class="pie-derecha">
+      <a href="assets/Documentos/Terminos%20de%20Servicio.pdf">Términos de Servicio</a>
+      <a href="assets/Documentos/Politica%20de%20Privacidad.pdf"
+      >Política de Privacidad</a
+      >
+      <a href="assets/Documentos/Proteccion%20de%20Datos.pdf">Protección de Datos</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/scripts/script.js"></script>
+</body>
+</html>

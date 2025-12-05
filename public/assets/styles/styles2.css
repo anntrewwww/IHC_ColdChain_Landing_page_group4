@@ -1,0 +1,478 @@
+/* ============================================= */
+/*  STYLES2.CSS - MODALES Y VALIDACIONES         */
+/* ============================================= */
+
+/* --- Estilos para Mensajes de Error en Formulario --- */
+.error-msg {
+  color: #dc2626;
+  font-size: 0.8rem;
+  display: none;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.input-error {
+  border: 1px solid #dc2626 !important;
+  background-color: #fff5f5 !important;
+}
+
+.modal-box-2.atencion {
+  max-width: 450px;
+  text-align: left;
+}
+
+/* Títulos y Textos Modal */
+.modal-box-2 h3 {
+  font-family: "Marcellus SC", serif;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.modal-box-2 p {
+  font-family: "Ruluko", sans-serif;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.icono-check-2.naranja {
+  background-color: #f59e0b;
+  box-shadow: 0 0 0 5px rgba(245, 158, 11, 0.2);
+}
+
+/* Campos del Modal Atención */
+.input-readonly {
+  background-color: #f3f4f6;
+  border: 1px solid #ddd;
+  color: #555;
+  cursor: not-allowed;
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  font-family: "Ruluko", sans-serif;
+}
+
+.campo-atencion label {
+  display: block;
+  font-family: "Ysabeau Office", sans-serif;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.campo-atencion textarea {
+  width: 100%;
+  height: 100px;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  font-family: "Ruluko", sans-serif;
+  resize: none;
+}
+
+/* Botón cerrar (X) */
+.btn-cerrar-modal-2 {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #999;
+}
+
+.btn-cerrar-modal-2:hover {
+  color: #333;
+}
+
+/* --- Animaciones --- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popIn {
+  to {
+    transform: scale(1);
+  }
+}
+
+.modal-box-2.atencion {
+  text-align: left;
+}
+
+/* TÍTULO CENTRADO */
+.modal-box-2.atencion h3 {
+  text-align: center;
+  font-family: "Marcellus SC", serif;
+  font-size: 1.8rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.modal-box-2.atencion p {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #666;
+}
+
+/* Inputs de solo lectura */
+.input-readonly {
+  background-color: #f3f4f6;
+  color: #555;
+  cursor: not-allowed;
+  border: 1px solid #e5e7eb;
+}
+
+/* ============================================= */
+/*  STYLES2.CSS - MODALES Y VALIDACIONES         */
+/* ============================================= */
+
+.error-msg {
+  color: #dc2626;
+  font-size: 0.8rem;
+  display: none;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.input-error {
+  border: 1px solid #dc2626 !important;
+  background-color: #fff5f5 !important;
+}
+
+/* --- Estilos Base de Modales (Overlay) --- */
+.modal-overlay-2,
+.modal-overlay-landing {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(3px);
+  animation: fadeIn 0.3s;
+}
+
+/* --- Caja del Modal --- */
+.modal-box-2,
+.modal-box-landing {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  transform: scale(0.8);
+  animation: popIn 0.3s forwards;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-box-2.atencion,
+.modal-box-landing.pago {
+  max-width: 450px;
+  text-align: left;
+}
+
+/* TÍTULO CENTRADO */
+.modal-box-2.atencion h3 {
+  text-align: center;
+  font-family: "Marcellus SC", serif;
+  font-size: 1.8rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.modal-box-2.atencion p {
+  text-align: center;
+}
+
+/* Inputs de solo lectura */
+.input-readonly {
+  background-color: #f3f4f6;
+  border: 1px solid #ddd;
+  color: #555;
+  cursor: not-allowed;
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  font-family: "Ruluko", sans-serif;
+}
+
+/* Títulos Generales de Modales */
+.modal-box-2 h3,
+.modal-box-landing h3 {
+  font-family: "Marcellus SC", serif;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.modal-box-2 p,
+.modal-box-landing p {
+  font-family: "Ruluko", sans-serif;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+/* Icono Check Animado */
+.icono-check,
+.icono-check-2 {
+  width: 60px;
+  height: 60px;
+  background-color: #10b981;
+  color: white;
+  font-size: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem auto;
+  box-shadow: 0 0 0 5px rgba(16, 185, 129, 0.2);
+}
+
+.icono-check.naranja,
+.icono-check-2.naranja {
+  background-color: #f59e0b;
+  box-shadow: 0 0 0 5px rgba(245, 158, 11, 0.2);
+}
+
+.campo-atencion label,
+.campo-pago label {
+  display: block;
+  font-family: "Ysabeau Office", sans-serif;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.campo-atencion textarea {
+  width: 100%;
+  height: 100px;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  font-family: "Ruluko", sans-serif;
+  resize: none;
+}
+
+.input-pago {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: "Ruluko", sans-serif;
+  font-size: 1rem;
+  background-color: #fcfcfc;
+  margin-bottom: 1rem;
+}
+
+/* Botón cerrar (X) */
+.btn-cerrar-modal,
+.btn-cerrar-modal-2 {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #999;
+}
+
+.btn-cerrar-modal:hover,
+.btn-cerrar-modal-2:hover {
+  color: #333;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popIn {
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Carrusel */
+.carousel-container {
+  max-width: 400px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.video-responsive {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.video-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left: 0;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text-caption {
+  color: black;
+  font-family: "Ysabeau Office", sans-serif;
+  font-size: 18px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.7);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  border-top-left-radius: 20px;
+}
+
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ============================================= */
+/*  CORRECCIÓN DEFINITIVA VIDEO YOUTUBE          */
+/* ============================================= */
+
+.video-container-full {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 15px;
+  background: black;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.video-container-full iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* REGLAS ESPECÍFICAS PARA CELULAR */
+@media (max-width: 768px) {
+  .imagen-app {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: none !important;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+
+  .video-container-full {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .carousel-container {
+    display: block;
+    width: 100%;
+    margin-top: 2rem;
+  }
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Recuperar Contraseña - ColdChain</title>
+  <link href="favicon.ico" rel="icon" type="image/x-icon">
+  <link href="assets/images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+  <link href="assets/images/android-chrome-192x192.png" rel="icon" sizes="192x192" type="image/png">
+  <link href="assets/images/android-chrome-512x512.png" rel="icon" sizes="512x512" type="image/png">
+  <link href="assets/styles/styles.css" rel="stylesheet"/>
+  <link href="assets/styles/Pie.css" rel="stylesheet"/>
+  <link href="assets/styles/pages.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Ruluko&family=Ysabeau+Office:ital,wght@0,1..1000;1,1..1000&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+<!-- Header -->
+<header class="encabezado-principal">
+  <nav class="barra-navegacion">
+    <a class="logo" href="ColdChain.html">
+      <img alt="Logo ColdChain" src="assets/images/Coldchain.png"/>
+      <span>ColdChain</span>
+    </a>
+    <ul class="menu-navegacion">
+      <li><a href="ColdChain.html">Inicio</a></li>
+      <li><a href="login.html">Iniciar Sesión</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="contenedor seccion-pagina-completa">
+    <h1 class="titulo-centrado-top">Recuperación de Cuenta</h1>
+
+    <div class="grid-dos-columnas">
+      <!-- Columna Izquierda: Título Grande -->
+      <div>
+        <h2 class="titulo-gigante">¿Olvidaste tu contraseña?</h2>
+        <p
+          style="
+                margin-top: 1.5rem;
+                color: #666;
+                font-size: 1.1rem;
+                font-family: 'Ruluko', sans-serif;
+              "
+        >
+          No te preocupes. Ingresa el correo electrónico asociado a tu
+          cuenta y te enviaremos un enlace para restablecer tu contraseña.
+        </p>
+      </div>
+
+      <!-- Columna Derecha: Formulario -->
+      <div class="formulario-contenedor">
+        <!-- Formulario con manejo de evento -->
+        <form id="form-recuperar">
+          <div class="campo-form">
+            <label>Correo Electrónico</label>
+            <input
+              class="input-estandar"
+              id="email-recuperar"
+              placeholder="ejemplo@correo.com"
+              required
+              type="email"
+            />
+            <small style="color: #666; display: block; margin-top: 5px"
+            >Te enviaremos las instrucciones aquí</small
+            >
+          </div>
+
+          <div style="margin-top: 2rem">
+            <button
+              class="boton btn-negro"
+              style="width: 100%"
+              type="submit"
+            >
+              Enviar enlace de recuperación
+            </button>
+          </div>
+
+          <!-- Botón para volver -->
+          <a class="boton btn-ya-tengo-cuenta" href="login.html"
+          >Volver a Iniciar Sesión</a
+          >
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="pie-de-pagina">
+  <div class="contenedor-pie">
+    <div class="pie-izquierda">
+      <img
+        alt="Logo ColdChain"
+        class="logo-pie"
+        src="assets/images/Coldchain.png"
+      />
+      <p>© 2025 ColdChain. Todos los derechos reservados.</p>
+    </div>
+    <div class="pie-derecha">
+      <a href="#">Términos de Servicio</a>
+      <a href="#">Política de Privacidad</a>
+    </div>
+  </div>
+</footer>
+<script>
+  document
+    .getElementById("form-recuperar")
+    .addEventListener("submit", function (e) {
+      e.preventDefault();
+      const email = document.getElementById("email-recuperar").value;
+      if (email) {
+        alert(
+          `Se ha enviado un enlace de recuperación a ${email}. Revisa tu bandeja de entrada.`
+        );
+        window.location.href = "login.html";
+      }
+    });
+</script>
+</body>
+</html>

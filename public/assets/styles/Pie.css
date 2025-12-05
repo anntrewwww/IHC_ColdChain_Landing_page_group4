@@ -1,15 +1,80 @@
+/* ============================================= */
+/*  PIE.CSS - FOOTER RESPONSIVE                  */
+/* ============================================= */
 .pie-de-pagina {
-  background-color: #212121;
+  background-color: #1a1a1a;
   color: #a0a0a0;
-  padding: 1.875rem 0;
+  padding: 2rem 0;
   font-family: "Ruluko", sans-serif;
+  margin-top: auto;
 }
 
 .contenedor-pie {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 68.75rem;
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.pie-izquierda {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-pie {
+  height: 2rem;
+}
+
+.pie-derecha {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.pie-de-pagina a {
+  color: #ccc;
+  text-decoration: none;
+  font-family: "Ysabeau Office", serif;
+  font-size: 0.9rem;
+}
+
+.pie-de-pagina a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  .contenedor-pie {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .pie-derecha {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}
+
+/* ============================================= */
+/*  PIE.CSS - FOOTER STYLES                      */
+/* ============================================= */
+.pie-de-pagina {
+  background-color: #1a1a1a;
+  color: #a0a0a0;
+  padding: 1.875rem 0;
+  font-family: "Ruluko", sans-serif;
+  width: 100%;
+}
+
+.contenedor-pie {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 75rem; /* Alineado con el header */
   margin: 0 auto;
   padding: 0 1.25rem;
 }
@@ -33,9 +98,109 @@
   color: #e0e0e0;
   text-decoration: none;
   font-family: "Ysabeau Office", serif;
+  font-size: 0.9rem;
 }
 
 .pie-de-pagina a:hover {
   text-decoration: underline;
   color: white;
+}
+
+@media (max-width: 768px) {
+  .contenedor-pie {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .pie-derecha {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+/* ============================================= */
+/*  PIE DE PAGINA (FOOTER) - RESPONSIVE          */
+/* ============================================= */
+
+.pie-de-pagina {
+  background-color: #1a1a1a; /* Negro suave */
+  color: #a0a0a0; /* Texto gris claro */
+  padding: 2.5rem 0;
+  font-family: "Ruluko", sans-serif;
+  width: 100%;
+  margin-top: auto;
+  border-top: 5px solid #333;
+}
+
+.contenedor-pie {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  flex-wrap: wrap; /* Permite que baje si no hay espacio */
+}
+
+.pie-izquierda {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-pie {
+  height: 2.5rem;
+  filter: brightness(0.9);
+}
+
+.pie-izquierda p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.pie-derecha {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.pie-de-pagina a {
+  color: #d1d1d1;
+  text-decoration: none;
+  font-family: "Ysabeau Office", serif;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  white-space: nowrap; /* Evita que el texto del enlace se rompa */
+}
+
+.pie-de-pagina a:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+/* --- DISEÑO MÓVIL (Celular) --- */
+@media (max-width: 768px) {
+  .contenedor-pie {
+    flex-direction: column; /* Apila todo verticalmente */
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .pie-izquierda {
+    flex-direction: column; /* Logo arriba, copyright abajo */
+    gap: 0.5rem;
+  }
+
+  .pie-derecha {
+    flex-direction: column; /* Enlaces uno debajo del otro */
+    gap: 1rem; /* Espacio entre enlaces */
+    width: 100%;
+  }
+
+  .pie-de-pagina a {
+    font-size: 1rem; /* Un poco más grande para tocar con el dedo */
+    padding: 5px 0; /* Área de toque más grande */
+    display: block; /* Ocupa el ancho para centrar bien */
+  }
 }

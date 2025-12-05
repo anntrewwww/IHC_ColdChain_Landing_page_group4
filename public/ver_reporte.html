@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Reporte de Auditoría - ColdChain</title>
+  <link href="favicon.ico" rel="icon" type="image/x-icon">
+  <link href="assets/images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+  <link href="assets/images/android-chrome-192x192.png" rel="icon" sizes="192x192" type="image/png">
+  <link href="assets/images/android-chrome-512x512.png" rel="icon" sizes="512x512" type="image/png">
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+    body {
+      background: #525659;
+      margin: 0;
+      padding: 20px;
+      font-family: "Roboto", sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .btn-download {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #dc2626;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 50px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      z-index: 9999;
+      font-size: 1rem;
+    }
+
+    #reporte-completo {
+      width: 100%;
+      max-width: 210mm;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .page {
+      background: white;
+      width: 100%;
+      max-width: 210mm;
+      min-height: 296mm;
+      padding: 15mm;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      box-sizing: border-box;
+      position: relative;
+      page-break-after: always;
+      overflow: hidden;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #2563eb;
+      padding-bottom: 15px;
+      margin-bottom: 25px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .logo-section h1 {
+      margin: 0;
+      color: #2563eb;
+      font-size: 1.8rem;
+    }
+
+    .logo-section p {
+      margin: 0;
+      color: #666;
+      font-size: 0.8rem;
+    }
+
+    .report-meta {
+      text-align: right;
+    }
+
+    .report-title {
+      text-align: center;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      background-color: #f3f4f6;
+      padding: 8px;
+      border-radius: 4px;
+    }
+
+    .report-title h2 {
+      margin: 0;
+      font-size: 1.2rem;
+      color: #111;
+    }
+
+    .section-title {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #2563eb;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 4px;
+      margin-bottom: 10px;
+      margin-top: 20px;
+    }
+
+    .details-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+
+    .detail-item strong {
+      display: block;
+      color: #555;
+      font-size: 0.8rem;
+    }
+
+    .detail-item span {
+      display: block;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+      margin-bottom: 15px;
+    }
+
+    th {
+      background-color: #f8f9fa;
+      color: #333;
+      text-align: left;
+      padding: 8px;
+      border-bottom: 2px solid #ddd;
+    }
+
+    td {
+      padding: 8px;
+      border-bottom: 1px solid #eee;
+      color: #444;
+    }
+
+    .chart-container {
+      width: 100%;
+      height: 200px;
+      border: 1px solid #eee;
+      padding: 5px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .badge {
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      font-weight: bold;
+      color: white;
+      display: inline-block;
+    }
+
+    .badge.normal {
+      background-color: #16a34a;
+    }
+
+    .badge.warning {
+      background-color: #d97706;
+    }
+
+    .badge.critical {
+      background-color: #dc2626;
+    }
+
+    .footer {
+      margin-top: 40px;
+      text-align: center;
+      color: #999;
+      font-size: 0.75rem;
+      border-top: 1px solid #eee;
+      padding-top: 10px;
+    }
+
+    .signatures {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+      gap: 20px;
+    }
+
+    .sig-line {
+      width: 45%;
+      border-top: 1px solid #000;
+      text-align: center;
+      padding-top: 5px;
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 0;
+        background: #fff;
+      }
+
+      .page {
+        box-shadow: none;
+        width: 100%;
+        min-height: auto;
+        padding: 15px;
+        margin-bottom: 0;
+      }
+
+      .btn-download {
+        width: 100%;
+        right: 0;
+        bottom: 0;
+        border-radius: 0;
+        text-align: center;
+        justify-content: center;
+      }
+
+      .details-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .report-meta {
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      table {
+        font-size: 0.75rem;
+      }
+
+      th,
+      td {
+        padding: 5px;
+      }
+    }
+
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+      }
+
+      .page {
+        width: 210mm;
+        height: 297mm;
+        box-shadow: none;
+        margin: 0;
+        page-break-after: always;
+      }
+
+      .btn-download {
+        display: none;
+      }
+    }
+  </style>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+<button class="btn-download" onclick="descargarPDF()">Descargar PDF</button>
+
+<div id="reporte-completo">
+  <!-- Aquí se generan las páginas -->
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const params = new URLSearchParams(window.location.search);
+    const idReporte = params.get("idReporte");
+
+    const reportes =
+      JSON.parse(localStorage.getItem("coldchain_reportes")) || [];
+    const equipos =
+      JSON.parse(localStorage.getItem("coldchain_equipos")) || [];
+    const reporteActual = reportes.find((r) => r.id == idReporte);
+
+    if (!reporteActual) {
+      document.getElementById("reporte-completo").innerHTML =
+        "<h3 style='text-align:center; margin-top:2rem;'>Reporte no encontrado.</h3>";
+      return;
+    }
+
+    const contenedor = document.getElementById("reporte-completo");
+
+    reporteActual.equiposIds.forEach((idEquipo, index) => {
+      const equipo = equipos.find((e) => e.id == idEquipo);
+      if (equipo) {
+        const pagina = crearPaginaHTML(
+          equipo,
+          reporteActual,
+          index + 1,
+          reporteActual.equiposIds.length
+        );
+        contenedor.appendChild(pagina);
+        generarGrafico(equipo, `chart-${equipo.id}`);
+      }
+    });
+  });
+
+  function crearPaginaHTML(equipo, reporte, numPag, totalPag) {
+    const div = document.createElement("div");
+    div.className = "page";
+
+    let badgeClass = "normal";
+    let textoEstado = "Operativo";
+    if (equipo.estado === "critical") {
+      badgeClass = "critical";
+      textoEstado = "Crítico";
+    } else if (equipo.estado === "warning") {
+      badgeClass = "warning";
+      textoEstado = "Advertencia";
+    }
+
+    let eventosHTML = "";
+    if (equipo.estado === "critical")
+      eventosHTML = `<tr><td>14:30</td><td><span class="badge critical">Crítico</span></td><td>Desviación > 5°C</td><td>Alerta</td></tr>`;
+    else if (equipo.estado === "warning")
+      eventosHTML = `<tr><td>10:00</td><td><span class="badge warning">Advertencia</span></td><td>Inestabilidad</td><td>Monitoreo</td></tr>`;
+    else
+      eventosHTML = `<tr><td colspan="4" style="text-align:center; color:#999;">Sin incidentes.</td></tr>`;
+
+    div.innerHTML = `
+                <div class="header">
+                    <div class="logo-section"><h1>COLDCHAIN</h1><p>Auditoría IoT</p></div>
+                    <div class="report-meta"><h3>#${reporte.id}</h3><p>${
+      reporte.fecha
+    }</p></div>
+                </div>
+                <div class="report-title"><h2>Reporte de Cumplimiento</h2></div>
+                <div class="section-title">Información del Equipo (${numPag}/${totalPag})</div>
+                <div class="details-grid">
+                    <div class="detail-item"><strong>Nombre:</strong><span>${
+      equipo.nombre
+    }</span></div>
+                    <div class="detail-item"><strong>Ubicación:</strong><span>${
+      equipo.ubicacion
+    }</span></div>
+                    <div class="detail-item"><strong>Estado:</strong><span class="badge ${badgeClass}">${textoEstado}</span></div>
+                </div>
+                <div class="section-title">Métricas</div>
+                <table>
+                    <thead><tr><th>Dato</th><th>Valor</th><th>Objetivo</th></tr></thead>
+                    <tbody>
+                        <tr><td>Actual</td><td>${equipo.temp}°C</td><td>${
+      equipo.objetivo
+    }°C</td></tr>
+                        <tr><td>Desviación</td><td>${(
+      equipo.temp - equipo.objetivo
+    ).toFixed(1)}°C</td><td>0.0°C</td></tr>
+                    </tbody>
+                </table>
+                <div class="section-title">Tendencia</div>
+                <div class="chart-container"><canvas id="chart-${
+      equipo.id
+    }"></canvas></div>
+                <div class="section-title">Eventos</div>
+                <table><thead><tr><th>Hora</th><th>Nivel</th><th>Desc.</th><th>Acción</th></tr></thead><tbody>${eventosHTML}</tbody></table>
+                <div class="signatures"><div class="sig-line">Supervisor</div><div class="sig-line">Auditor</div></div>
+                <div class="footer">Generado por ColdChain | ${Date.now()}</div>
+            `;
+    return div;
+  }
+
+  function generarGrafico(equipo, canvasId) {
+    setTimeout(() => {
+      const ctx = document.getElementById(canvasId);
+      if (!ctx) return;
+      let dataPoints = [];
+      for (let i = 0; i < 12; i++) {
+        let val = equipo.objetivo + (Math.random() - 0.5);
+        if (equipo.estado === "critical") val += i * 0.5;
+        dataPoints.push(val);
+      }
+      new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: [
+            "00:00",
+            "02:00",
+            "04:00",
+            "06:00",
+            "08:00",
+            "10:00",
+            "12:00",
+            "14:00",
+            "16:00",
+            "18:00",
+            "20:00",
+            "22:00",
+          ],
+          datasets: [
+            {
+              label: "Temp",
+              data: dataPoints,
+              borderColor: "#2563eb",
+              borderWidth: 2,
+              pointRadius: 0,
+              fill: false,
+            },
+            {
+              label: "Ref",
+              data: Array(12).fill(equipo.objetivo),
+              borderColor: "#dc2626",
+              borderDash: [5, 5],
+              borderWidth: 1,
+              pointRadius: 0,
+            },
+          ],
+        },
+        options: {
+          animation: false,
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {legend: {display: false}},
+          scales: {y: {beginAtZero: false}},
+        },
+      });
+    }, 100);
+  }
+
+  function descargarPDF() {
+    const element = document.getElementById("reporte-completo");
+    const btn = document.querySelector(".btn-download");
+    btn.style.display = "none";
+    const opt = {
+      margin: 0,
+      filename: "Reporte_ColdChain.pdf",
+      image: {type: "jpeg", quality: 0.98},
+      html2canvas: {scale: 2, useCORS: true},
+      jsPDF: {unit: "mm", format: "a4", orientation: "portrait"},
+    };
+    html2pdf()
+      .set(opt)
+      .from(element)
+      .save()
+      .then(() => {
+        btn.style.display = "block";
+      });
+  }
+</script>
+</body>
+</html>

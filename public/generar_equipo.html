@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Registrar Dispositivo - ColdChain</title>
+  <link href="favicon.ico" rel="icon" type="image/x-icon">
+  <link href="assets/images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+  <link href="assets/images/android-chrome-192x192.png" rel="icon" sizes="192x192" type="image/png">
+  <link href="assets/images/android-chrome-512x512.png" rel="icon" sizes="512x512" type="image/png">
+  <link href="assets/styles/styles.css" rel="stylesheet"/>
+  <link href="assets/styles/Pie.css" rel="stylesheet"/>
+  <link href="assets/styles/pages.css" rel="stylesheet"/>
+  <link href="assets/styles/dashboard.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Ruluko&family=Ysabeau+Office:ital,wght@0,1..1000;1,1..1000&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+<header class="encabezado-principal">
+  <nav class="barra-navegacion">
+    <a class="logo" href="ColdChain.html">
+      <img alt="Logo ColdChain" src="assets/images/Coldchain.png"/>
+      <span>ColdChain</span>
+    </a>
+  </nav>
+</header>
+
+<main>
+  <section
+    class="contenedor seccion-pagina-completa"
+    style="padding-top: 2rem"
+  >
+    <h1 class="titulo-centrado-top">Registrar Nuevo Dispositivo</h1>
+
+    <div class="formulario-contenedor" style="max-width: 700px">
+      <form id="form-generar">
+        <!-- Nombre -->
+        <div class="campo-form">
+          <label>Nombre del Equipo</label>
+          <input
+            class="input-estandar"
+            id="nombreEq"
+            placeholder="Ej: Cámara Fría B4"
+            required
+            type="text"
+          />
+        </div>
+
+        <!-- Fila 2: Tipo y ID Sensor -->
+        <div
+          class="grid-dos-columnas"
+          style="gap: 1.5rem; margin-bottom: 1.5rem; align-items: start"
+        >
+          <div>
+            <label
+              style="
+                    font-family: 'Ysabeau Office', sans-serif;
+                    font-weight: bold;
+                    display: block;
+                    margin-bottom: 0.5rem;
+                  "
+            >Tipo</label
+            >
+            <select class="input-select" id="tipoEq" style="width: 100%">
+              <option>Refrigerador</option>
+              <option>Congelador</option>
+              <option>Incubadora</option>
+              <option>Transporte Móvil</option>
+            </select>
+          </div>
+          <div>
+            <label
+              style="
+                    font-family: 'Ysabeau Office', sans-serif;
+                    font-weight: bold;
+                    display: block;
+                    margin-bottom: 0.5rem;
+                  "
+            >ID Sensor IoT</label
+            >
+            <input
+              class="input-estandar"
+              id="idSensor"
+              placeholder="Ej: SN-2024-X99"
+              required
+              type="text"
+            />
+          </div>
+        </div>
+
+        <!-- Ubicación -->
+        <div class="campo-form">
+          <label>Ubicación Física</label>
+          <input
+            class="input-estandar"
+            id="ubiEq"
+            placeholder="Ej: Almacén Central - Pasillo 4"
+            required
+            type="text"
+          />
+        </div>
+
+        <!-- Temperaturas y Estado -->
+        <div class="campo-form">
+          <label>Configuración de Temperatura y Estado</label>
+
+          <!-- Fila Superior: Objetivo y Estado -->
+          <div
+            class="grid-dos-columnas"
+            style="gap: 1.5rem; align-items: start; margin-bottom: 1rem"
+          >
+            <div>
+              <label style="font-size: 0.9rem; color: #666"
+              >Temperatura Objetivo (°C)</label
+              >
+              <input
+                class="input-estandar"
+                id="objEq"
+                placeholder="-18"
+                required
+                step="0.1"
+                type="number"
+              />
+            </div>
+            <div>
+              <label style="font-size: 0.9rem; color: #666"
+              >Estado Inicial (Prueba)</label
+              >
+              <select
+                class="input-select"
+                id="estadoIni"
+                style="width: 100%"
+              >
+                <option value="normal">✔ Normal (Verde)</option>
+                <option value="warning">! Advertencia (Amarillo)</option>
+                <option value="critical">⚠ Crítico (Rojo)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Fila Inferior: Temperatura Inicial (Restaurada) -->
+          <div>
+            <label style="font-size: 0.9rem; color: #666"
+            >Temperatura Inicial (Referencia)</label
+            >
+            <input
+              class="input-estandar"
+              id="tempIni"
+              placeholder="-18.2"
+              required
+              step="0.1"
+              type="number"
+            />
+          </div>
+        </div>
+
+        <!-- Botones -->
+        <div class="acciones-login" style="margin-top: 3rem">
+          <a
+            class="boton btn-olvide"
+            href="monitoreo.html"
+            style="text-align: center; text-decoration: none"
+          >Cancelar</a
+          >
+          <button class="boton btn-negro" type="submit">
+            Guardar Equipo
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="pie-de-pagina">
+  <div class="contenedor-pie">
+    <div class="pie-izquierda">
+      <img
+        alt="Logo ColdChain"
+        class="logo-pie"
+        src="assets/images/Coldchain.png"
+      />
+      <p>© 2025 ColdChain. Todos los derechos reservados.</p>
+    </div>
+    <div class="pie-derecha">
+      <a href="assets/Documentos/Terminos%20de%20Servicio.pdf">Términos de Servicio</a>
+      <a href="assets/Documentos/Politica%20de%20Privacidad.pdf"
+      >Política de Privacidad</a
+      >
+      <a href="assets/Documentos/Proteccion%20de%20Datos.pdf">Protección de Datos</a>
+    </div>
+  </div>
+</footer>
+<script src="assets/scripts/script.js"></script>
+</body>
+</html>

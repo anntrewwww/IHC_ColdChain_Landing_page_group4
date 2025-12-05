@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="32c87110-e599-4337-9375-89bce9a66556" name="Changes" comment="feat: Agregando dashboard, nuevos reportes, sistema de usuarios y chatbot">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/Documentos/Politica de Privacidad.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/Documentos/Terminos de Servicio.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Riesgo salud.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/Trazabilidad.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/appi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/appi22.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/appmovilblack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/beneficios.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/chipblue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/dashboard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/equipo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/facebook.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/filtro.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/github.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/gpswhite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/graphicsgreen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/graphicswhite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/helpblack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/historial.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/inicio.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/menublack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/metricas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/movilwhite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/notification.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/perdidas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/precio.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/procesador.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/raar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/shieldpurple.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/shieldwhite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/signalwhite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/solucion.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/temppwhite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/timeblack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/userblack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/whatsapp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/wifiwhite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/scripts/auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/scripts/landing.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/scripts/perfil.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/scripts/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/scripts/script2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/styles/dashboard.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/styles/pages.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/styles/perfil.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/styles/styles2.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/contraseña.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/demo2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/detalle_equipo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/generar_equipo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/index2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/monitoreo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/perfil.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/perfil2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/perfil3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/registro.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/registro2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/reporte.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/ver_reporte.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/android-chrome-192x192.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/android-chrome-192x192.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/android-chrome-512x512.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/android-chrome-512x512.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/apple-touch-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/apple-touch-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/Documentos/obtenerDocumento.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/Documentos/Proteccion de Datos.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/Coldchain.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/Coldchain.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/ICON 2.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/ICON 2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/LAB.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/LAB.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/MOVIL_CAMPAÑAS.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/MOVIL_CAMPAÑAS.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/VACUNA.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/VACUNA.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/adriel.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/adriel.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/app store.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/app store.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/arrow up.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/arrow up.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/bata.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/bata.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/build.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/build.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/calendario morado.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/calendario morado.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/calendario verde.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/calendario verde.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/cesar.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/cesar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/check blue.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/check blue.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/check orange.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/check orange.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/check purple.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/check purple.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/check.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/check.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/company.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/company.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/diego.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/diego.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/geo.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/geo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/gmail.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/gmail.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/graficos.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/graficos.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/hospital.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/hospital.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/interfaz.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/interfaz.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/maps.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/maps.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/money.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/money.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/movil.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/movil.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/notificacion.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/notificacion.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/odar.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/odar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/phone black.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/phone black.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/phone blue.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/phone blue.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/pills.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/pills.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/play store.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/play store.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/rolando.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/rolando.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/send.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/send.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/sergio.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/sergio.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/shield.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/shield.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/time.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/time.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/images/user.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/user.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scripts/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/styles/Pie.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/styles/Pie.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/styles/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/styles/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon-16x16.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/favicon-16x16.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon-32x32.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/images/favicon-32x32.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/ColdChain.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="antrew &lt;antrew2606@gmail.com&gt;" />
+        <option value="cesarhuanca2606@gmail.com" />
+        <option value="Cesar" />
+      </list>
+    </option>
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="subida-del-pie-de-pagina" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="SIGN_OFF_COMMIT" value="true" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {}
+}</component>
+  <component name="GitHubPullRequestState">{
+  &quot;prStates&quot;: [
+    {
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOQVYmvM6zXZSh&quot;,
+        &quot;number&quot;: 2
+      },
+      &quot;lastSeen&quot;: 1763155648746
+    }
+  ]
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/anntrewwww/IHC_ColdChain_Landing_page_group4.git&quot;,
+    &quot;accountId&quot;: &quot;9075110e-7dcf-40c6-a0e1-51683405a3c9&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/public/assets/styles/styles2.css" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MaliciousPackageCheckinHandlerState">
+    <option name="packageCheck" value="true" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="35RyTe4BCa9JnNZ9bbBxAYMhVch" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.index.html.executor": "Debug",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "actualizacion-px-a-rem",
+    "last_opened_file_path": "D:/TF_ColdChain/public/assets/styles",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "advanced.settings",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\TF_ColdChain\public\assets\styles" />
+      <recent name="D:\TF_ColdChain\public" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\TF_ColdChain\public\assets\images" />
+      <recent name="D:\TF_ColdChain\public" />
+      <recent name="D:\TF_ColdChain\public\assets\styles" />
+      <recent name="D:\TF_ColdChain\public\assets" />
+      <recent name="D:\TF_ColdChain\public\assets\Documentos" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-WS-252.27397.92" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="32c87110-e599-4337-9375-89bce9a66556" name="Changes" comment="" />
+      <created>1763087187963</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1763087187963</updated>
+      <workItem from="1763087189072" duration="417000" />
+      <workItem from="1763087633393" duration="79000" />
+      <workItem from="1763088371801" duration="494000" />
+      <workItem from="1763088898461" duration="59000" />
+      <workItem from="1763088958784" duration="532000" />
+      <workItem from="1763089554645" duration="3953000" />
+      <workItem from="1763093544267" duration="939000" />
+      <workItem from="1763094497809" duration="1232000" />
+      <workItem from="1763131110880" duration="2061000" />
+      <workItem from="1763146147334" duration="4406000" />
+      <workItem from="1763155518682" duration="55000" />
+      <workItem from="1763155591129" duration="1188000" />
+      <workItem from="1763157922270" duration="5443000" />
+      <workItem from="1763179757531" duration="882000" />
+      <workItem from="1763182030992" duration="376000" />
+      <workItem from="1763182510347" duration="76000" />
+      <workItem from="1764270359893" duration="4210000" />
+      <workItem from="1764822089706" duration="10259000" />
+      <workItem from="1764858913825" duration="22639000" />
+    </task>
+    <task id="LOCAL-00001" summary="feat: setup initial project structure and content">
+      <option name="closed" value="true" />
+      <created>1763092441415</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1763092441415</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: Reiniciando subida de archivos png y .ico">
+      <option name="closed" value="true" />
+      <created>1763092713115</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1763092713115</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: Subida del pie de pagina">
+      <option name="closed" value="true" />
+      <created>1763155362892</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1763155362892</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: Subida del pie de pagina">
+      <option name="closed" value="true" />
+      <created>1763156160563</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1763156160563</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: Subida del pie de pagina">
+      <option name="closed" value="true" />
+      <created>1763156341358</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1763156341358</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feature: cambio de px a rem en los archivos styles.css y pie.css">
+      <option name="closed" value="true" />
+      <created>1763165118747</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1763165118747</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feature: se añade nueva imagen al app MOVIL_CAMPAÑAS.png">
+      <option name="closed" value="true" />
+      <created>1763180505384</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1763180505384</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UpdateCopyrightCheckinHandler">
+    <option name="UPDATE_COPYRIGHT" value="true" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <MESSAGE value="Guardando mi trabajo antes de sincronizar" />
+    <MESSAGE value="feat: setup initial project structure and content" />
+    <MESSAGE value="feat: Reiniciando subida de archivos png y .ico" />
+    <MESSAGE value="feat: Subida del pie de pagina" />
+    <MESSAGE value="feature: cambio de px a rem en los archivos styles.css y pie.css" />
+    <MESSAGE value="feature: se añade nueva imagen al app MOVIL_CAMPAÑAS.png" />
+    <MESSAGE value="feat: Agregando dashboard, nuevos reportes, sistema de usuarios y chatbot" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/actualizacion-px-a-rem' into actualizacion-px-a-rem" />
+    <MESSAGE value="feat: actualizando 04/12/2025" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: actualizando 04/12/2025" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+</project>

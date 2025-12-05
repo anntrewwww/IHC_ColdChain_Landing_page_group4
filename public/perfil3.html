@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Mi Perfil - ColdChain</title>
+  <link href="favicon.ico" rel="icon" type="image/x-icon">
+  <link href="assets/images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+  <link href="assets/images/android-chrome-192x192.png" rel="icon" sizes="192x192" type="image/png">
+  <link href="assets/images/android-chrome-512x512.png" rel="icon" sizes="512x512" type="image/png">
+  <link href="assets/styles/styles.css" rel="stylesheet"/>
+  <link href="assets/styles/Pie.css" rel="stylesheet"/>
+  <link href="assets/styles/perfil.css" rel="stylesheet"/>
+  <link href="assets/styles/dashboard.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Ruluko&family=Ysabeau+Office:ital,wght@0,1..1000;1,1..1000&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+<header class="encabezado-principal">
+  <nav class="barra-navegacion">
+    <a class="logo" href="index2.html">
+      <img alt="Logo ColdChain" src="assets/images/Coldchain.png"/>
+      <span>ColdChain</span>
+    </a>
+    <div class="iconos-header-dashboard">
+      <a class="btn-volver-tarjeta" href="javascript:history.back()"
+      >❮ Volver al Reporte</a
+      >
+    </div>
+  </nav>
+</header>
+
+<main style="background-color: #fcfcfc">
+  <section class="contenedor seccion-perfil">
+    <div class="perfil-top-bar">
+      <h1 class="titulo-perfil">Mi Perfil</h1>
+      <button class="boton-cerrar-sesion" onclick="cerrarSesion()">
+        Cerrar Sesión
+      </button>
+    </div>
+
+    <div class="tarjeta-perfil fade-in">
+      <div class="avatar-container">
+        <img
+          alt="Avatar Usuario"
+          src="assets/images/userblack.png"
+          style="filter: invert(1); opacity: 0.9"
+        />
+      </div>
+      <h2 class="nombre-usuario-display">Cargando...</h2>
+      <p class="rol-usuario">Rol: ...</p>
+
+      <hr class="divider"/>
+
+      <form id="form-perfil" onsubmit="return false;">
+        <div class="campo-perfil">
+          <label
+          >Nombre de Usuario <span class="tag-edit">Editable</span></label
+          >
+          <input class="input-perfil editable" id="p-usuario" type="text"/>
+        </div>
+        <div class="campo-perfil">
+          <label>Correo Principal (ID)</label>
+          <input class="input-perfil" id="p-email" readonly type="email"/>
+        </div>
+        <div class="campo-perfil">
+          <label
+          >Correo de Recuperación
+            <span class="tag-edit">Editable</span></label
+          >
+          <input
+            class="input-perfil editable"
+            id="p-recovery"
+            placeholder="ej: alternativo@gmail.com"
+            type="email"
+          />
+        </div>
+        <div class="fila-doble">
+          <div class="campo-perfil">
+            <label>Fecha de Nacimiento</label>
+            <input
+              class="input-perfil"
+              id="p-nacimiento"
+              readonly
+              type="text"
+            />
+          </div>
+          <div class="campo-perfil">
+            <label>Teléfono <span class="tag-edit">Editable</span></label>
+            <input
+              class="input-perfil editable"
+              id="p-telefono"
+              type="tel"
+            />
+          </div>
+        </div>
+        <div class="campo-perfil">
+          <label>Contraseña</label>
+          <div class="input-con-boton">
+            <input
+              class="input-perfil"
+              readonly
+              type="password"
+              value="********"
+            />
+            <button
+              class="btn-cambiar-pass"
+              onclick="alert('Por seguridad, contacta a soporte para cambiar tu contraseña.')"
+            >
+              Cambiar
+            </button>
+          </div>
+        </div>
+
+        <button
+          class="btn-guardar-cambios"
+          onclick="guardarCambiosPerfil()"
+        >
+          Guardar Cambios
+        </button>
+
+        <div class="zona-peligro">
+          <h4>Zona de Peligro</h4>
+          <p>
+            Si eliminas tu cuenta, perderás el acceso a todos tus equipos y
+            reportes.
+          </p>
+          <button class="btn-eliminar-cuenta" onclick="abrirModalEliminarCuenta()">
+            Eliminar Cuenta
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<!-- MODAL ELIMINAR -->
+<div class="modal-overlay" id="modal-eliminar-cuenta" style="display: none;">
+  <div class="modal-box">
+    <h3 class="titulo-rojo">¿Estás seguro?</h3>
+    <p style="color: #555">Estás a punto de eliminar tu cuenta permanentemente.</p>
+    <div class="acciones-modal">
+      <button class="btn-cancelar" onclick="cerrarModalEliminarCuenta()">Cancelar</button>
+      <button class="btn-confirmar-borrar" onclick="confirmarEliminacionCuenta()">Sí, Eliminar</button>
+    </div>
+  </div>
+</div>
+<!-- MODAL GENÉRICO PARA MENSAJES (Reemplaza alert) -->
+<div class="modal-overlay" id="modal-mensaje-generico">
+  <div class="modal-box">
+    <h3 id="modal-titulo-msg" style="margin-top:0;">Aviso</h3>
+    <p id="modal-texto-msg" style="color:#555; margin-bottom:1.5rem;"></p>
+    <button class="btn-confirmar-borrar" onclick="cerrarModalGenerico()" style="background:#000; width:100%;">Aceptar
+    </button>
+  </div>
+</div>
+
+<!-- MODAL CONFIRMACIÓN GENÉRICA (Reemplaza confirm) -->
+<div class="modal-overlay" id="modal-confirmacion-generica">
+  <div class="modal-box">
+    <h3 style="margin-top:0;">Confirmación</h3>
+    <p id="modal-texto-confirm" style="color:#555; margin-bottom:1.5rem;"></p>
+    <div class="acciones-modal">
+      <button class="btn-cancelar" onclick="cerrarModalConfirmacion()">Cancelar</button>
+      <button class="btn-confirmar-borrar" id="btn-aceptar-confirm">Aceptar</button>
+    </div>
+  </div>
+</div>
+<footer class="pie-de-pagina">
+  <div class="contenedor-pie">
+    <div class="pie-izquierda">
+      <img
+        alt="Logo ColdChain"
+        class="logo-pie"
+        src="assets/images/Coldchain.png"
+      />
+      <p>© 2025 ColdChain. Todos los derechos reservados.</p>
+    </div>
+    <div class="pie-derecha">
+      <a href="assets/Documentos/Terminos%20de%20Servicio.pdf">Términos de Servicio</a>
+      <a href="assets/Documentos/Politica%20de%20Privacidad.pdf"
+      >Política de Privacidad</a
+      >
+      <a href="assets/Documentos/Proteccion%20de%20Datos.pdf">Protección de Datos</a>
+    </div>
+  </div>
+</footer>
+<script src="assets/scripts/auth.js"></script>
+</body>
+</html>

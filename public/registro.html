@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Registro - ColdChain</title>
+  <link href="favicon.ico" rel="icon" type="image/x-icon">
+  <link href="assets/images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+  <link href="assets/images/android-chrome-192x192.png" rel="icon" sizes="192x192" type="image/png">
+  <link href="assets/images/android-chrome-512x512.png" rel="icon" sizes="512x512" type="image/png">
+  <link href="assets/styles/styles.css" rel="stylesheet"/>
+  <link href="assets/styles/Pie.css" rel="stylesheet"/>
+  <link href="assets/styles/pages.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Ruluko&family=Ysabeau+Office:ital,wght@0,1..1000;1,1..1000&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+<header class="encabezado-principal">
+  <nav class="barra-navegacion">
+    <a class="logo" href="ColdChain.html">
+      <img alt="Logo ColdChain" src="assets/images/Coldchain.png"/>
+      <span>ColdChain</span>
+    </a>
+    <ul class="menu-navegacion">
+      <li><a href="ColdChain.html">Inicio</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="contenedor seccion-pagina-completa">
+    <div class="grid-dos-columnas">
+      <!-- Izquierda -->
+      <div>
+        <h1 class="titulo-gigante">Únete a ColdChain hoy</h1>
+      </div>
+
+      <!-- Derecha -->
+      <div class="formulario-contenedor">
+        <!-- AQUÍ: El action envía a demo2.html al hacer submit -->
+        <form action="demo2.html">
+          <div class="campo-form">
+            <label>Usuario</label>
+            <input class="input-estandar" required type="text"/>
+            <small style="color: #666">Ingrese su usuario</small>
+          </div>
+
+          <div class="campo-form">
+            <label>Fecha de Nacimiento</label>
+            <div class="fecha-grid">
+              <div>
+                <!-- Select Día -->
+                <select
+                  class="input-select"
+                  id="dia"
+                  required
+                  style="width: 100%"
+                >
+                  <option disabled selected value="">Día</option>
+                  <!-- Se llena con JS -->
+                </select>
+              </div>
+              <div>
+                <!-- Select Mes -->
+                <select
+                  class="input-select"
+                  id="mes"
+                  required
+                  style="width: 100%"
+                >
+                  <option disabled selected value="">Mes</option>
+                  <!-- Se llena con JS -->
+                </select>
+              </div>
+              <div>
+                <!-- Select Año -->
+                <select
+                  class="input-select"
+                  id="anio"
+                  required
+                  style="width: 100%"
+                >
+                  <option disabled selected value="">Año</option>
+                  <!-- Se llena con JS -->
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="campo-form">
+            <label>Correo Electrónico</label>
+            <input class="input-estandar" required type="email"/>
+            <small style="color: #666">Ingrese su correo electrónico</small>
+          </div>
+
+          <div class="campo-form">
+            <label>Contraseña</label>
+            <input class="input-estandar" required type="password"/>
+            <small style="color: #666">Ingrese su contraseña</small>
+          </div>
+
+          <button class="boton btn-negro" type="submit">Registrarse</button>
+
+          <p class="legal-text">
+            Al hacer clic en Registrarse, aceptas los Términos de servicio
+            de ColdChain y reconoces que se aplica nuestro Aviso de
+            privacidad.
+          </p>
+
+          <!-- Enlace corregido para ir al Login -->
+          <a class="boton btn-ya-tengo-cuenta" href="login.html"
+          >¿Ya tienes una cuenta? Inicia sesión</a
+          >
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="pie-de-pagina">
+  <div class="contenedor-pie">
+    <div class="pie-izquierda">
+      <img
+        alt="Logo ColdChain"
+        class="logo-pie"
+        src="assets/images/Coldchain.png"
+      />
+      <p>© 2025 ColdChain. Todos los derechos reservados.</p>
+    </div>
+    <div class="pie-derecha">
+      <a href="assets/Documentos/Terminos%20de%20Servicio.pdf">Términos de Servicio</a>
+      <a href="assets/Documentos/Politica%20de%20Privacidad.pdf"
+      >Política de Privacidad</a
+      >
+      <a href="assets/Documentos/Proteccion%20de%20Datos.pdf">Protección de Datos</a>
+    </div>
+  </div>
+</footer>
+<script>
+  // Llenar Días (1-31)
+  const selectDia = document.getElementById("dia");
+  for (let i = 1; i <= 31; i++) {
+    let option = document.createElement("option");
+    option.value = i;
+    option.text = i;
+    selectDia.appendChild(option);
+  }
+
+  // Llenar Meses
+  const selectMes = document.getElementById("mes");
+  const meses = [
+    "Enero",
+    "Febrero",
+    "Marzo",
+    "Abril",
+    "Mayo",
+    "Junio",
+    "Julio",
+    "Agosto",
+    "Septiembre",
+    "Octubre",
+    "Noviembre",
+    "Diciembre",
+  ];
+  meses.forEach((mes, index) => {
+    let option = document.createElement("option");
+    option.value = index + 1;
+    option.text = mes;
+    selectMes.appendChild(option);
+  });
+
+  // Llenar Años (1940 - Año Actual)
+  const selectAnio = document.getElementById("anio");
+  const yearActual = new Date().getFullYear();
+  for (let i = yearActual; i >= 1940; i--) {
+    let option = document.createElement("option");
+    option.value = i;
+    option.text = i;
+    selectAnio.appendChild(option);
+  }
+</script>
+<script src="assets/scripts/auth.js"></script>
+</body>
+</html>

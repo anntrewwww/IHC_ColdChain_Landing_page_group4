@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Generar Reporte - ColdChain</title>
+  <link href="favicon.ico" rel="icon" type="image/x-icon">
+  <link href="assets/images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+  <link href="assets/images/android-chrome-192x192.png" rel="icon" sizes="192x192" type="image/png">
+  <link href="assets/images/android-chrome-512x512.png" rel="icon" sizes="512x512" type="image/png">
+  <link href="assets/styles/styles.css" rel="stylesheet"/>
+  <link href="assets/styles/Pie.css" rel="stylesheet"/>
+  <link href="assets/styles/pages.css" rel="stylesheet"/>
+  <link href="assets/styles/dashboard.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Ruluko&family=Ysabeau+Office:ital,wght@0,1..1000;1,1..1000&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+<header class="encabezado-principal">
+  <nav class="barra-navegacion">
+    <a class="logo" href="index2.html">
+      <img alt="Logo ColdChain" src="assets/images/Coldchain.png"/>
+      <span>ColdChain</span>
+    </a>
+    <div class="iconos-header-dashboard">
+      <a class="btn-usuario-header" href="perfil3.html" title="Perfil">
+        <img alt="Perfil" src="assets/images/userblack.png"/>
+      </a>
+
+      <button class="btn-menu-hamburguesa" onclick="toggleMenu()">
+        <img alt="Menu" src="assets/images/menublack.png"/>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<!-- MENÚ LATERAL -->
+<div class="menu-lateral" id="sideMenu">
+  <div class="cabecera-menu">
+    <h3>Menú</h3>
+    <button class="btn-cerrar" onclick="toggleMenu()">&times;</button>
+  </div>
+  <ul class="lista-menu-lateral">
+    <li>
+      <a href="index2.html#inicio"
+      ><img src="assets/images/inicio.png" width="20"/> Inicio</a
+      >
+    </li>
+    <li>
+      <a href="index2.html#solucion"
+      ><img src="assets/images/solucion.png" width="20"/> Solución</a
+      >
+    </li>
+    <li>
+      <a href="index2.html#beneficios"
+      ><img src="assets/images/beneficios.png" width="20"/> Beneficios</a
+      >
+    </li>
+    <li>
+      <a href="index2.html#equipo"
+      ><img src="assets/images/equipo.png" width="20"/> Equipo</a
+      >
+    </li>
+    <li>
+      <a href="index2.html#precios"
+      ><img src="assets/images/precio.png" width="20"/> Precios</a
+      >
+    </li>
+    <li>
+      <a href="index2.html#app-movil"
+      ><img src="assets/images/appmovilblack.png" width="20"/> App Movil</a
+      >
+    </li>
+    <li>
+      <a href="index2.html#contacto"
+      ><img src="assets/images/phone black.png" width="20"/> Contacto</a
+      >
+    </li>
+  </ul>
+</div>
+<div class="menu-overlay" id="menuOverlay" onclick="toggleMenu()"></div>
+
+<main style="background-color: #fcfcfc">
+  <section class="contenedor dashboard-section">
+    <!-- Header Sección -->
+    <div class="detalle-header-top">
+      <div class="grupo-titulo-volver">
+        <a class="btn-volver-tarjeta" href="javascript:history.back()"
+        >❮ Volver a detalles</a
+        >
+        <div class="info-titulo-separador">
+          <h1 class="titulo-detalle">Módulo de Reportes</h1>
+          <p
+            style="
+                  margin: 0;
+                  color: #666;
+                  font-family: 'Ruluko', sans-serif;
+                "
+          >
+            Generación de reportes para auditorías
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grid 2 Columnas -->
+    <div class="layout-reporte-grid">
+      <!-- IZQUIERDA: CONFIGURACIÓN -->
+      <div class="tarjeta-blanca fade-in">
+        <div class="titulo-grafico" style="margin-bottom: 1.5rem">
+          <img alt="Config" src="assets/images/filtro.png" width="24"/>
+          <h2>Configuración del Reporte</h2>
+        </div>
+
+        <form id="form-reporte">
+          <!-- Tipo -->
+          <div class="campo-form">
+            <label>Tipo de reporte</label>
+            <select class="input-select" style="width: 100%">
+              <option>Reporte de Auditoría Completo</option>
+              <option>Resumen de Temperaturas</option>
+              <option>Historial de Incidentes</option>
+              <option>Certificado de Calibración</option>
+            </select>
+          </div>
+
+          <!-- Fechas -->
+          <div
+            class="grid-dos-columnas"
+            style="gap: 1rem; margin-bottom: 1.5rem; align-items: start"
+          >
+            <div>
+              <label
+                style="
+                      font-family: 'Ysabeau Office', serif;
+                      font-weight: bold;
+                    "
+              >Fecha Inicio</label
+              >
+              <input
+                class="input-estandar"
+                type="date"
+                value="2024-10-04"
+              />
+            </div>
+            <div>
+              <label
+                style="
+                      font-family: 'Ysabeau Office', serif;
+                      font-weight: bold;
+                    "
+              >Fecha Fin</label
+              >
+              <input
+                class="input-estandar"
+                type="date"
+                value="2024-11-01"
+              />
+            </div>
+          </div>
+
+          <!-- Equipos Checkboxes (Dinámico) -->
+          <div class="campo-form">
+            <label style="margin-bottom: 1rem; display: block"
+            >Equipos a Incluir</label
+            >
+            <div id="lista-equipos-check">
+              <!-- El script.js llenará esto automáticamente -->
+            </div>
+          </div>
+
+          <!-- Opciones Extra -->
+          <div
+            class="campo-form"
+            style="
+                  margin-top: 2rem;
+                  border-top: 1px solid #eee;
+                  padding-top: 1rem;
+                "
+          >
+            <label>Opciones del Reporte</label>
+            <div
+              style="
+                    margin-top: 0.5rem;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                  "
+            >
+              <label
+                style="
+                      display: flex;
+                      gap: 10px;
+                      align-items: center;
+                      font-weight: normal;
+                    "
+              >
+                <input checked type="checkbox"/> Incluir registro detallado
+                de eventos y alertas
+              </label>
+              <label
+                style="
+                      display: flex;
+                      gap: 10px;
+                      align-items: center;
+                      font-weight: normal;
+                    "
+              >
+                <input checked type="checkbox"/> Incluir gráficos de
+                tendencias
+              </label>
+              <label
+                style="
+                      display: flex;
+                      gap: 10px;
+                      align-items: center;
+                      font-weight: normal;
+                    "
+              >
+                <input type="checkbox"/> Incluir datos de humedad
+              </label>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!-- DERECHA: VISTA PREVIA -->
+      <div
+        class="tarjeta-blanca fade-in delay-1"
+        style="height: fit-content"
+      >
+        <div class="titulo-grafico" style="margin-bottom: 1.5rem">
+          <h2>Vista Previa del Reporte</h2>
+        </div>
+        <p class="subtitulo-grafico">
+          Resumen de la información que se incluirá
+        </p>
+
+        <div class="stats-reporte-grid">
+          <div class="stat-box azul">
+            <strong id="preview-count-eq">0</strong>
+            <span>Equipos</span>
+          </div>
+          <div class="stat-box verde">
+            <strong id="preview-count-data">0h</strong>
+            <span>Datos</span>
+          </div>
+          <div class="stat-box amarillo">
+            <strong id="preview-count-evt">0</strong>
+            <span>Eventos</span>
+          </div>
+        </div>
+
+        <div style="border-top: 1px solid #eee; margin: 1.5rem 0"></div>
+
+        <h4
+          style="font-family: 'Ysabeau Office', serif; margin-bottom: 1rem"
+        >
+          Contenido:
+        </h4>
+        <ul class="lista-contenido-reporte">
+          <li>Resumen ejecutivo de cadena de frío</li>
+          <li>Estado actual de equipos seleccionados</li>
+          <li>Análisis de desviaciones</li>
+          <li>Registro de eventos y alertas</li>
+          <li>Gráficos de tendencias</li>
+          <li>Recomendaciones correctivas</li>
+        </ul>
+
+        <div style="margin-top: 2rem">
+          <a
+            class="boton btn-negro"
+            href="#"
+            id="btn-guardar-rep"
+            style="
+                  width: 100%;
+                  display: block;
+                  text-align: center;
+                  text-decoration: none;
+                "
+          >Guardar Reporte</a
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- MODAL ÉXITO REPORTE -->
+<!-- Nota: No lleva style="display:block", el CSS se encarga de ocultarlo -->
+<div id="modal-exito-reporte">
+  <div class="modal-content-center">
+    <h3 style="color: #16a34a">¡Reporte Guardado!</h3>
+    <p>Se ha generado correctamente y añadido al historial del equipo.</p>
+    <button
+      id="btn-cerrar-exito"
+      style="
+            background: #000;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+          "
+    >
+      Aceptar
+    </button>
+  </div>
+</div>
+<footer class="pie-de-pagina">
+  <div class="contenedor-pie">
+    <div class="pie-izquierda">
+      <img
+        alt="Logo ColdChain"
+        class="logo-pie"
+        src="assets/images/Coldchain.png"
+      />
+      <p>© 2025 ColdChain. Todos los derechos reservados.</p>
+    </div>
+    <div class="pie-derecha">
+      <a href="assets/Documentos/Terminos%20de%20Servicio.pdf">Términos de Servicio</a>
+      <a href="assets/Documentos/Politica%20de%20Privacidad.pdf">Política de Privacidad</a
+      >
+      <a href="assets/Documentos/Proteccion%20de%20Datos.pdf">Protección de Datos</a>
+    </div>
+  </div>
+</footer>
+<script src="assets/scripts/script.js"></script>
+</body>
+</html>
